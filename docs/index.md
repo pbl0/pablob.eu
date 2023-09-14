@@ -1,6 +1,4 @@
-## My blog
-
-> Latests posts
+## Latests posts
 
 - August 27, 2023 - [ How to install davinci resolve in any linux distro](/blog/2023/08/27/how-to-install-davinci-resolve-in-any-linux-distro/)
 - February 20, 2023 [Learning how to drive in Assetto Corsa](/blog/2023/02/20/learning-how-to-drive-in-assetto-corsa/)
@@ -14,4 +12,4 @@
 - [About me](me/)
 - [My Github profile](https://github.com/pbl0)
 - [My youtube channel](https://www.youtube.com/channel/UCoI4HY4K4CB_J8O_Mphlnbw)
-- [Contact me (Telegram)](https://t.me/pablobls)
+- [Contact me on Telegram](https://t.me/pablobls)

@@ -27,7 +27,7 @@ Why not?
 [![Top Langs](https://github-readme-stats.vercel.app/api?username=pbl0&theme=github_dark&show_icons=true&count_private=true)](https://github.com/pbl0)
 
 <figure markdown>
-  ![Edit app launcher](docs/assets/blog/me/amora720.jpg){ .image loading=lazy }
+  ![Edit app launcher](/assets/blog/me/amora720.jpg){ .image loading=lazy }
   <figcaption>My best friend Amora</figcaption>
 </figure>
 

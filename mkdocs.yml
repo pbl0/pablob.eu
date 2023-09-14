@@ -28,6 +28,7 @@ theme:
     - search.highlight
     - search.share
     - navigation.sections
+    - navigation.tabs
     - content.code.copy
 
 markdown_extensions:
@@ -69,7 +70,6 @@ plugins:
       categories_toc: true
   - glightbox
 nav:
-  - index.md
   - Blog:
       - blog/index.md
   - About me:
