@@ -15,11 +15,11 @@ authors:
 
 # Raspberry PI media server with Manjaro
 
-> Last edit: 23/07/2023
-
 Instructions to set up a media server running [Manjaro ARM Minimal](https://manjaro.org/download/) (Yes! manjaro). I wrote this "guide", mostly to remember myself in the future but feel free to follow along.
 
 <!-- more -->
+
+> Last edit: 23/07/2023
 
 <figure markdown>
   ![Post cover](pi-manjaro-server/pi.jpg){ .cover .image loading=lazy }

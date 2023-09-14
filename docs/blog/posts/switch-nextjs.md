@@ -14,6 +14,10 @@ As you may have read on my first post this blog started as a little GatsbyJS web
 
 <!-- more -->
 
+???+ info "Update 14/09/2023"
+
+    I no longer use NextJS for this website. I've switched to mkdocs material.
+
 <figure markdown>
   ![Post cover](/assets/blog/switch/cover.png){ .cover .image loading=lazy }
 </figure>

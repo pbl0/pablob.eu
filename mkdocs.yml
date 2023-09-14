@@ -39,6 +39,7 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
   - admonition
+  - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -55,7 +56,7 @@ extra:
   generator: false
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/pbl0/pablo-blog
+      link: https://github.com/pbl0/pablob.eu
     - icon: fontawesome/brands/telegram
       link: https://t.me/pablobls
     - icon: fontawesome/brands/youtube

@@ -26,9 +26,10 @@ Why not?
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs?username=pbl0&hide=hack,tsql,php,swift,ruby&layout=compact&langs_count=8&theme=github_dark)](https://github.com/pbl0)
 [![Top Langs](https://github-readme-stats.vercel.app/api?username=pbl0&theme=github_dark&show_icons=true&count_private=true)](https://github.com/pbl0)
 
-## My best friend (Amora)
-
-![Amora is a dog](https://raw.githubusercontent.com/pbl0/pablo-blog/master/public/assets/blog/me/amora720.jpg)
+<figure markdown>
+  ![Edit app launcher](docs/assets/blog/me/amora720.jpg){ .image loading=lazy }
+  <figcaption>My best friend Amora</figcaption>
+</figure>
 
 ## Where the source?
 
