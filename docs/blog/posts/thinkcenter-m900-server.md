@@ -17,11 +17,18 @@ authors:
 
 Recently I got myself a refurbished Lenovo Thinkcentre M900 Tiny which will be replacing my Raspberry Pi 4 as my home server.
 
-Similarly to my previous post about the Raspberry Pi home server this isn't necessarily a guide rather than me taking notes so I don't forget the commands and configurations I've done, but feel free to follow along but **remember to change the commands**.
+<!-- more -->
 
-I've added a NVME 1TB SSD and 5TB hard-drive Seagate HDD that I've shucked which it barely fitted on the case. I've also added 16GB of RAM.
+<figure markdown>
+  ![Post cover](/assets/blog/tc-m900/tiny.jpg){ .cover .image loading=lazy }
+  <figcaption>Very tiny</figcaption>
+</figure>
 
-In this occasion I've installed Debian Bookworm and instead of Docker I went with Podman, so I don't need to run the container as root.
+Similarly to my [previous post about the Raspberry Pi home server](/blog/2022/10/16/raspberry-pi-media-server-with-manjaro/) this isn't necessarily a guide rather than me taking notes so I don't forget the commands and all the tiny configurations I've done, but feel free to follow along but **remember to change the commands**.
+
+I've added a NVME 1TB SSD and a 5TB hard-drive Seagate HDD that I've shucked, which it almost didn't fit on the M900 case. It has 16GB of RAM.
+
+In this occasion I've installed Debian Bookworm and instead of Docker I went with Podman, so I don't need to run the containers as root user.
 
 For each Podman container I will create and enable a systemd service using `podman generate systemd`.
 
@@ -195,20 +202,6 @@ podman run -d \
 podman generate systemd --new --name calibre-web-nightly > ~/.config/systemd/user/calibre-web.service
 
 systemctl --user enable calibre-web.service
-```
-
-#### Calibre-tg-bot
-
-My own telegram bot that interacts with calibre library, it can add new books to the database and query books from the library.
-
-```sh
-podman run -d --name calibre-tg-bot --volume /config/calibre-web/library:/calibre-tg-bot/books --restart unless-stopped calibre-tg-bot
-```
-
-```sh
-podman generate systemd --new --name calibre-tg-bot > ~/.config/systemd/user/calibre-tg-bot.service
-
-systemctl --user enable calibre-tg-bot.service
 ```
 
 ### Jellyfin
@@ -402,4 +395,62 @@ podman run -d \
 podman generate systemd --new --name playitgg > ~/.config/systemd/user/playitgg.service
 
 systemctl --user enable playitgg.service
+```
+
+### My own podman/docker images
+
+#### Podman registry
+
+```
+podman run -d -p 5000:5000 --restart=always --name registry registry:2
+```
+
+```
+podman generate systemd --new --name registry > ~/.config/systemd/user/registry.service
+```
+
+#### Pablo bot
+
+> My telegram bot
+
+##### On my dev machine
+
+```sh
+podman build -t pablo-bot .
+```
+
+```sh
+podman tag localhost/pablo-bot 192.168.1.119:5000/pablo-bot
+podman push --tls-verify=false 192.168.1.119:5000/pablo-bot
+```
+
+##### On my server
+
+```
+podman pull --tls-verify=false localhost:5000/pablo-bot
+```
+
+```sh
+podman run -d --name pablo-bot \
+	--tls-verify=false \
+	-v /config/pablo-bot/config.ini:/pablo-bot/config.ini \
+	localhost:5000/pablo-bot
+```
+
+```sh
+podman generate systemd --new --name pablo-bot > ~/.config/systemd/user/pablo-bot.service
+```
+
+#### Calibre-tg-bot
+
+My own telegram bot that interacts with calibre library, it can add new books to the database and query books from the library.
+
+```sh
+podman run -d --name calibre-tg-bot --volume /config/calibre-web/library:/calibre-tg-bot/books --restart unless-stopped calibre-tg-bot
+```
+
+```sh
+podman generate systemd --new --name calibre-tg-bot > ~/.config/systemd/user/calibre-tg-bot.service
+
+systemctl --user enable calibre-tg-bot.service
 ```

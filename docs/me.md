@@ -1,16 +1,7 @@
 ---
-title: "About me"
-excerpt: "description"
-coverImage: "/assets/blog/home-server-tour/cover.png"
-date: ""
-author:
-  name: Pablo
-  picture: ""
-ogImage:
-  url: ""
-width: ""
-height: ""
-hidden: true
+title: About me
+description: >
+	I'm Pablo, a programmer and this is my website. Professionally I've worked mostly with Angular...
 ---
 
 I'm Pablo, a programmer and this is my website. Professionally I've worked mostly with Angular, but from time to time I also mess around with Python, React, Godot and a few others. Besides computers and programming I also love [listening](/music) (and sometimes pretending to play) music, playing video-games and reading books. I also have fun with some gardening and taking random pictures of the sky and nature. Oh, I also like dogs, of course.

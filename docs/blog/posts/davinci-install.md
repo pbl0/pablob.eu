@@ -1,5 +1,5 @@
 ---
-excerpt: >
+description: >
   How to install Davinci Resolve in any linux distro with distrobox. For this case I'm using Manjaro Linux as the host system and with the free version of the video editor...
 date: 2023-08-27T02:00:00.000Z
 width: "2560"
