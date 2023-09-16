@@ -104,7 +104,7 @@ Port 80 for Homepage and port 53 for Pihole dns.
 
 reboot.
 
-## Installing podman containers
+## Installing Podman containers
 
 ### Portainer
 

@@ -1,8 +1,12 @@
-## Latests posts
+# pablo's docs
 
-- August 27, 2023 - [ How to install davinci resolve in any linux distro](/blog/2023/08/27/how-to-install-davinci-resolve-in-any-linux-distro/)
-- February 20, 2023 [Learning how to drive in Assetto Corsa](/blog/2023/02/20/learning-how-to-drive-in-assetto-corsa/)
-- January 25, 2023 [How to fix Elite Dangerous launcher issues on Linux](/blog/2023/01/25/how-to-fix-elite-dangerous-launcher-issues-on-linux/)
+## Recent Posts
+
+- September 13, 2023 - [Thinkcentre Tiny Server](docs/blog/posts/thinkcenter-m900-server.md)
+- August 27, 2023 - [How to install Davinci Resolve in any linux distro](docs/blog/posts/davinci-install.md)
+- February 20, 2023 - [Learning how to drive in Assetto Corsa](docs/blog/posts/learning-how-to-drive.md)
+- January 25, 2023 - [How to fix Elite Dangerous launcher issues on Linux](docs/blog/posts/ed-linux-launcher.md)
+- January 14, 2023 - [Remove Kobo DRM](docs/blog/posts/remove-kobo-drm.md)
 
 [See all posts](/blog)
 
