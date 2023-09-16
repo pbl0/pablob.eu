@@ -1,3 +1,4 @@
 #!/bin/bash
-env/bin/python generate_index.py
-env/bin/mkdocs serve
+echo "mkdocs serve";
+env/bin/python generate_index.py;
+env/bin/mkdocs serve;
