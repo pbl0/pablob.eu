@@ -101,6 +101,26 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://pablob.eu/projects/banana-spleet/</loc>
+         <lastmod>2023-09-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pablob.eu/projects/geoguessr-random-bot/</loc>
+         <lastmod>2023-09-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pablob.eu/projects/launchpad2kb/</loc>
+         <lastmod>2023-09-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pablob.eu/projects/rrpablobot/</loc>
+         <lastmod>2023-09-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://pablob.eu/blog/archive/2023/</loc>
          <lastmod>2023-09-17</lastmod>
          <changefreq>daily</changefreq>
