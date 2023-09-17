@@ -1,14 +1,14 @@
 ---
 description: >
-  Recently I got myself a refurbished Lenovo Thinkcentre M900 Tiny which will be replacing my Raspberry Pi 4 as my home server. Similarly to my previous post about the Raspberry Pi home server...
+    Recently I got myself a refurbished Lenovo Thinkcentre M900 Tiny which will be replacing my Raspberry Pi 4 as my home server. Similarly to my previous post about the Raspberry Pi home server...
 
 date: 2023-09-13T21:14:00.000Z
 
 categories:
-  - Linux
-  - Self-hosted
+    - Linux
+    - Self-hosted
 authors:
-  - pablo
+    - pablo
 ---
 
 # Thinkcentre Tiny Server
@@ -36,20 +36,20 @@ For each Podman container I will create and enable a systemd service using `podm
 
 When needed podman volumes will reside in /config:
 
-- /config/
-  - calibre-web/
-  - homepage/
-  - jellyfin/
-  - ...
+-   /config/
+    -   calibre-web/
+    -   homepage/
+    -   jellyfin/
+    -   ...
 
 5TB drive will be mounted via fstab at /mnt/data as follows:
 
-- /mnt/data/
-  - media/
-    - downloads/
-    - movies/
-    - series/
-  - backups/
+-   /mnt/data/
+    -   media/
+        -   downloads/
+        -   movies/
+        -   series/
+    -   backups/
 
 ## Initial configuration
 
