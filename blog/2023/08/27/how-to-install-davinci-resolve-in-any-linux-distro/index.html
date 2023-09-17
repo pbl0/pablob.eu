@@ -1291,7 +1291,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                     <span class="md-ellipsis">
                       
-                        2 min read
+                        3 min read
                       
                     </span>
                   </div>
@@ -1336,22 +1336,42 @@
 </ul>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>distrobox<span class="w"> </span>enter<span class="w"> </span>fedora
 </span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo dnf update
+</span></code></pre></div>
 <ul>
 <li>
 <p>Running <code>DaVinci_Resolve_18.5.1_Linux.run -i</code> will give many dependency errors, install whatever package it ask using <code>dnf install</code> and re-run the executable.</p>
 </li>
 <li>
-<p>When you notice it doesn't complain about dependencies anymore. Run the executable again with <code>sudo</code>. That should install the program inside your container.</p>
-</li>
-<li>
-<p>In my case, launching <code>/opt/resolve/bin/resolve</code> will result in a glib error that I've solved by renaming every libglib within <code>/opt/resolve/libs</code> as shown below. This apparently forces Davinci Resolve to use the system's libraries instead of the ones that come built-in with the video editor.</p>
+<p>In my case with an AMD GPU:</p>
 </li>
 </ul>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>/opt/resolve/libs
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>sudo<span class="w"> </span>mv<span class="w"> </span>libglib-2.0.so.0.6800.4<span class="w"> </span>libglib-2.0.so.0.6800.4.bak
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>sudo<span class="w"> </span>mv<span class="w"> </span>libglib-2.0.so.0<span class="w"> </span>libglib-2.0.so.0.bak
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>sudo<span class="w"> </span>mv<span class="w"> </span>libglib-2.0.so.0<span class="w"> </span>libglib-2.0.so.bak
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>fuse<span class="w"> </span>fuse-devel<span class="w"> </span>alsa-lib<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>apr<span class="w"> </span>apr-util<span class="w"> </span>dbus-libs<span class="w"> </span>fontconfig<span class="w"> </span>freetype<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span>libglvnd<span class="w"> </span>libglvnd-egl<span class="w"> </span>libglvnd-glx<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span>libglvnd-opengl<span class="w"> </span>libICE<span class="w"> </span>librsvg2<span class="w"> </span>libSM<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span>libX11<span class="w"> </span>libXcursor<span class="w"> </span>libXext<span class="w"> </span>libXfixes<span class="w"> </span>libXi<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span>libXinerama<span class="w"> </span>libxkbcommon<span class="w"> </span>libxkbcommon-x11<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span>libXrandr<span class="w"> </span>libXrender<span class="w"> </span>libXtst<span class="w"> </span>libXxf86vm<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span>mesa-libGLU<span class="w"> </span>mtdev<span class="w"> </span>pulseaudio-libs<span class="w"> </span>xcb-util<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span>xcb-util-image<span class="w"> </span>xcb-util-keysyms<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span>xcb-util-renderutil<span class="w"> </span>xcb-util-wm<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span>mesa-libOpenCL<span class="w"> </span>rocm-opencl<span class="w"> </span>libxcrypt-compat<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span>alsa-plugins-pulseaudio
+</span></code></pre></div>
+<ul>
+<li>
+<p>When you notice it doesn't complain about dependencies anymore. Run the executable again with <code>sudo</code>. That should launch the installer.</p>
+</li>
+<li>
+<p>After that, in my case, launching <code>/opt/resolve/bin/resolve</code> would result in a glib error that I've solved by renaming every libglib within <code>/opt/resolve/libs</code> as shown below. This apparently forces Davinci Resolve to use the system's libraries instead of the ones that come built-in with the video editor.</p>
+</li>
+</ul>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nb">cd</span><span class="w"> </span>/opt/resolve/libs
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>sudo<span class="w"> </span>mv<span class="w"> </span>libglib-2.0.so.0.6800.4<span class="w"> </span>libglib-2.0.so.0.6800.4.bak
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>sudo<span class="w"> </span>mv<span class="w"> </span>libglib-2.0.so.0<span class="w"> </span>libglib-2.0.so.0.bak
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>sudo<span class="w"> </span>mv<span class="w"> </span>libglib-2.0.so<span class="w"> </span>libglib-2.0.so.bak
 </span></code></pre></div>
 <ul>
 <li>
@@ -1361,16 +1381,21 @@
 <p>To integrate the application to your host system run:</p>
 </li>
 </ul>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>distrobox-export<span class="w"> </span>--app<span class="w"> </span>/opt/resolve/bin/resolve
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>distrobox-export<span class="w"> </span>--app<span class="w"> </span>/opt/resolve/bin/resolve
 </span></code></pre></div>
-<p>For some reason the default launcher created with the previous will fail to launch. If this happens right click on Davinci Resolve icon &gt; Edit Application &gt; Application and leave the <code>Work Path</code> field empty.</p>
+<p>For some reason the default launcher created with the previous command will fail to launch. If this happens right click on Davinci Resolve icon &gt; Edit Application &gt; Application and leave the <code>Work Path</code> field empty.</p>
 <figure>
 <p><a class="glightbox" href="/assets/blog/davinci/install/davinci-edit-launcher.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Edit app launcher" class="image" loading="lazy" src="/assets/blog/davinci/install/davinci-edit-launcher.png" /></a>
   </p>
 <figcaption>Edit app launcher</figcaption>
 </figure>
 <ul>
-<li>Now you should be able to launch Davinci Resolve from your host system and start editing!</li>
+<li>
+<p>Now you should be able to launch Davinci Resolve from your host system and start editing!</p>
+</li>
+<li>
+<p>Be careful when cleaning podman containers by executing <code>podman system prune</code> as it may delete the distrobox container.</p>
+</li>
 </ul>
 <figure>
 <p><a class="glightbox" href="/assets/blog/davinci/install/davinci-app.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Davinci Resolve opened" class="image" loading="lazy" src="/assets/blog/davinci/install/davinci-app.png" /></a>
@@ -1380,6 +1405,7 @@
 <h2 id="issues-detected">Issues detected</h2>
 <ul>
 <li>Will crash every time I click on the Fusion tab.</li>
+<li>Doesn't work with H264 clips.</li>
 </ul>
 
 
