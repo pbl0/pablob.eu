@@ -2,11 +2,11 @@
 
 ## Recent Posts
 
-- September 13, 2023 - [Thinkcentre Tiny Server](docs/blog/posts/thinkcenter-m900-server.md)
-- August 27, 2023 - [How to install Davinci Resolve in any linux distro](docs/blog/posts/davinci-install.md)
-- February 20, 2023 - [Learning how to drive in Assetto Corsa](docs/blog/posts/learning-how-to-drive.md)
-- January 25, 2023 - [How to fix Elite Dangerous launcher issues on Linux](docs/blog/posts/ed-linux-launcher.md)
-- January 14, 2023 - [Remove Kobo DRM](docs/blog/posts/remove-kobo-drm.md)
+- September 13, 2023 - [Thinkcentre Tiny Server](blog/posts/thinkcenter-m900-server.md)
+- August 27, 2023 - [How to install Davinci Resolve in any linux distro](blog/posts/davinci-install.md)
+- February 20, 2023 - [Learning how to drive in Assetto Corsa](blog/posts/learning-how-to-drive.md)
+- January 25, 2023 - [How to fix Elite Dangerous launcher issues on Linux](blog/posts/ed-linux-launcher.md)
+- January 14, 2023 - [Remove Kobo DRM](blog/posts/remove-kobo-drm.md)
 
 [See all posts](/blog)
 
