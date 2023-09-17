@@ -1,0 +1,1 @@
+/media/datos/Dev/pablob.eu/docs/blog/posts/geoguessr-random-bot.md

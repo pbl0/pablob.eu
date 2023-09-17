@@ -1,17 +1,15 @@
 ---
 description: >
-  This time I bring a telegram bot which will scrape the web version of the game and retrieve useful data. If you happen to also play Rival Regions and want to try my bot.
+    This time I bring a telegram bot which will scrape the web version of the game and retrieve useful data. If you happen to also play Rival Regions and want to try my bot.
 
 date: 2022-04-10T14:25:07.322Z
 
-width: "680"
-height: "700"
 categories:
-  - Telegram
-  - Games
-  - Bot
+    - Telegram
+    - Games
+    - Bot
 authors:
-  - pablo
+    - pablo
 ---
 
 # @rrpablotbot
