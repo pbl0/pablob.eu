@@ -1536,15 +1536,17 @@
 <h2 id="filesystem-information">Filesystem information</h2>
 <p>When needed podman volumes will reside in /config:</p>
 <ul>
-<li>/config/</li>
+<li>/config/<ul>
 <li>calibre-web/</li>
 <li>homepage/</li>
 <li>jellyfin/</li>
 <li>...</li>
 </ul>
+</li>
+</ul>
 <p>5TB drive will be mounted via fstab at /mnt/data as follows:</p>
 <ul>
-<li>/mnt/data/</li>
+<li>/mnt/data/<ul>
 <li>media/<ul>
 <li>downloads/</li>
 <li>movies/</li>
@@ -1552,6 +1554,8 @@
 </ul>
 </li>
 <li>backups/</li>
+</ul>
+</li>
 </ul>
 <h2 id="initial-configuration">Initial configuration</h2>
 <p>Setup sudo:</p>
