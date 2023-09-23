@@ -1302,6 +1302,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#immich" class="md-nav__link">
+    Immich
+  </a>
+  
+    <nav class="md-nav" aria-label="Immich">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#redis" class="md-nav__link">
+    Redis
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#postgres" class="md-nav__link">
+    Postgres
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#radarr" class="md-nav__link">
     Radarr
   </a>
@@ -1502,7 +1529,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                     <span class="md-ellipsis">
                       
-                        6 min read
+                        7 min read
                       
                     </span>
                   </div>
@@ -1678,154 +1705,204 @@
 </span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
 </span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>jellyfin.service
 </span></code></pre></div>
-<h3 id="radarr">Radarr</h3>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="o">=</span>radarr<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">PUID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">PGID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">TZ</span><span class="o">=</span>Europe/Madrid<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">7878</span>:7878<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">    </span>-v<span class="w"> </span>/config/radarr:/config<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">    </span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/mnt/data/media,destination<span class="o">=</span>/data,ro<span class="o">=</span>false,relabel<span class="o">=</span>private<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">    </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">    </span>lscr.io/linuxserver/radarr
+<h3 id="immich">Immich</h3>
+<p>Monolithic version from https://github.com/imagegenius/docker-immich/</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span>--name<span class="o">=</span>immich<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">PUID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">PGID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">TZ</span><span class="o">=</span>Europe/Madrid<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">DB_HOSTNAME</span><span class="o">=</span><span class="m">192</span>.168.1.119<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">DB_USERNAME</span><span class="o">=</span>postgres<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">DB_PASSWORD</span><span class="o">=</span>postgres<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-9"><a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">DB_DATABASE_NAME</span><span class="o">=</span>immich<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-10"><a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">REDIS_HOSTNAME</span><span class="o">=</span><span class="m">192</span>.168.1.119<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-11"><a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="w">  </span>-e<span class="w"> </span><span class="nv">DISABLE_TYPESENSE</span><span class="o">=</span><span class="nb">false</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-12"><a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">2283</span>:8080<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-13"><a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="w">  </span>-v<span class="w"> </span>/config/immich:/config<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-14"><a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="w">  </span>-v<span class="w"> </span>/home/pablo/immich-app/library:/photos<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-15"><a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="w">  </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-19-16"><a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="w">  </span>ghcr.io/imagegenius/immich:latest
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>radarr<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/radarr.service
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>immich<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/immich.service
 </span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
-</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>radarr.service
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>immich.service
+</span></code></pre></div>
+<p>This container requires two other containers to be run:</p>
+<h4 id="redis">Redis</h4>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span>--name<span class="o">=</span>redis<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">  </span>-p<span class="w"> </span><span class="m">6379</span>:6379<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">  </span>docker.io/redis
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>redis<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/redis.service
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>redis.service
+</span></code></pre></div>
+<h4 id="postgres">Postgres</h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>podman run -d \
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>  --name=postgres14 \
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>  -e POSTGRES_USER=postgres \
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>  -e POSTGRES_PASSWORD=postgres \
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>  -e POSTGRES_DB=immich \
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>  -v path_to_postgres:/var/lib/postgresql/data \
+</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>  -p 5432:5432 \
+</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>  docker.io/postgres:14
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>postgres14<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/postgres14.service
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>postgres14.service
+</span></code></pre></div>
+<h3 id="radarr">Radarr</h3>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="o">=</span>radarr<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">PUID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">PGID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">TZ</span><span class="o">=</span>Europe/Madrid<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">7878</span>:7878<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-25-5"><a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">    </span>-v<span class="w"> </span>/config/radarr:/config<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-25-6"><a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">    </span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/mnt/data/media,destination<span class="o">=</span>/data,ro<span class="o">=</span>false,relabel<span class="o">=</span>private<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-25-7"><a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="w">    </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-25-8"><a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a><span class="w">    </span>lscr.io/linuxserver/radarr
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>radarr<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/radarr.service
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>radarr.service
 </span></code></pre></div>
 <h3 id="sonarr">Sonarr</h3>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="o">=</span>sonarr<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">PUID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">PGID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span>-e<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">    </span><span class="nv">TZ</span><span class="o">=</span>Europe/Madrid<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">8989</span>:8989<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">    </span>-v<span class="w"> </span>/config/sonarr:/config<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">    </span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/mnt/data/media,destination<span class="o">=</span>/data,ro<span class="o">=</span>false,relabel<span class="o">=</span>private<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="w">    </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span>lscr.io/linuxserver/sonarr:latest
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="o">=</span>sonarr<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">PUID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">PGID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span>-e<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">    </span><span class="nv">TZ</span><span class="o">=</span>Europe/Madrid<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">8989</span>:8989<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="w">    </span>-v<span class="w"> </span>/config/sonarr:/config<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a><span class="w">    </span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span>/mnt/data/media,destination<span class="o">=</span>/data,ro<span class="o">=</span>false,relabel<span class="o">=</span>private<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="w">    </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span>lscr.io/linuxserver/sonarr:latest
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>sonarr<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/sonarr.service
-</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>
-</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>sonarr.service
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>sonarr<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/sonarr.service
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>sonarr.service
 </span></code></pre></div>
 <h3 id="transmision">Transmision</h3>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="o">=</span>transmission<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">PUID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">PGID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">TZ</span><span class="o">=</span>Europe/Madrid<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">USER</span><span class="o">=</span>pablo<span class="w"> </span>-e<span class="w"> </span><span class="nv">PASS</span><span class="o">=</span>password<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">9091</span>:9091<span class="w"> </span>-p<span class="w"> </span><span class="m">51413</span>:51413<span class="w"> </span>-p<span class="w"> </span><span class="m">51413</span>:51413/udp<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">    </span>-v<span class="w"> </span>/config/transmission:/config<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">    </span>-v<span class="w"> </span>/mnt/data/media/downloads:/data/downloads:Z<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">    </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span>lscr.io/linuxserver/transmission:latest
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="o">=</span>transmission<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">PUID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">PGID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">TZ</span><span class="o">=</span>Europe/Madrid<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-29-4"><a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">USER</span><span class="o">=</span>pablo<span class="w"> </span>-e<span class="w"> </span><span class="nv">PASS</span><span class="o">=</span>password<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-29-5"><a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">9091</span>:9091<span class="w"> </span>-p<span class="w"> </span><span class="m">51413</span>:51413<span class="w"> </span>-p<span class="w"> </span><span class="m">51413</span>:51413/udp<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-29-6"><a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="w">    </span>-v<span class="w"> </span>/config/transmission:/config<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-29-7"><a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="w">    </span>-v<span class="w"> </span>/mnt/data/media/downloads:/data/downloads:Z<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-29-8"><a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="w">    </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span>lscr.io/linuxserver/transmission:latest
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>transmission<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/transmission.service
-</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
-</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>transmission.service
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>transmission<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/transmission.service
+</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>
+</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>transmission.service
 </span></code></pre></div>
 <h3 id="monero">Monero</h3>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>podman<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>bitmonero
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>podman<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>bitmonero
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w">  </span>--name<span class="o">=</span><span class="s2">&quot;monerod&quot;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">    </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">18080</span>:18080<span class="w"> </span>-p<span class="w"> </span><span class="m">18089</span>:18089<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="w">    </span>-v<span class="w"> </span>bitmonero:/home/monero<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="w">    </span>docker.io/sethsimmons/simple-monerod:latest<span class="w"> </span>--rpc-restricted-bind-ip<span class="o">=</span><span class="m">0</span>.0.0.0<span class="w"> </span>--rpc-restricted-bind-port<span class="o">=</span><span class="m">18089</span><span class="w"> </span>--no-igd<span class="w"> </span>--no-zmq<span class="w"> </span>--enable-dns-blocklist<span class="w"> </span>--prune-blockchain
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w">  </span>--name<span class="o">=</span><span class="s2">&quot;monerod&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">18080</span>:18080<span class="w"> </span>-p<span class="w"> </span><span class="m">18089</span>:18089<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="w">    </span>-v<span class="w"> </span>bitmonero:/home/monero<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="w">    </span>docker.io/sethsimmons/simple-monerod:latest<span class="w"> </span>--rpc-restricted-bind-ip<span class="o">=</span><span class="m">0</span>.0.0.0<span class="w"> </span>--rpc-restricted-bind-port<span class="o">=</span><span class="m">18089</span><span class="w"> </span>--no-igd<span class="w"> </span>--no-zmq<span class="w"> </span>--enable-dns-blocklist<span class="w"> </span>--prune-blockchain
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>monerod<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/monerod.service
-</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
-</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>monero.service
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>monerod<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/monerod.service
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>monero.service
 </span></code></pre></div>
 <h3 id="jackett">Jackett</h3>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="o">=</span>jackett<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">PUID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">PGID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">TZ</span><span class="o">=</span>Europe/Madrid<span class="w"> </span>-e<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a><span class="w">    </span><span class="nv">AUTO_UPDATE</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-28-5"><a id="__codelineno-28-5" name="__codelineno-28-5" href="#__codelineno-28-5"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">9117</span>:9117<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-28-6"><a id="__codelineno-28-6" name="__codelineno-28-6" href="#__codelineno-28-6"></a><span class="w">    </span>-v<span class="w"> </span>/config/jackett:/config<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-28-7"><a id="__codelineno-28-7" name="__codelineno-28-7" href="#__codelineno-28-7"></a><span class="w">    </span>-v<span class="w"> </span>/mnt/data/media/downloads:/downloads<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-28-8"><a id="__codelineno-28-8" name="__codelineno-28-8" href="#__codelineno-28-8"></a><span class="w">    </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-28-9"><a id="__codelineno-28-9" name="__codelineno-28-9" href="#__codelineno-28-9"></a><span class="w">    </span>lscr.io/linuxserver/jackett:latest
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="o">=</span>jackett<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">PUID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span>-e<span class="w"> </span><span class="nv">PGID</span><span class="o">=</span><span class="m">1000</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">TZ</span><span class="o">=</span>Europe/Madrid<span class="w"> </span>-e<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="w">    </span><span class="nv">AUTO_UPDATE</span><span class="o">=</span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">9117</span>:9117<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-34-6"><a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a><span class="w">    </span>-v<span class="w"> </span>/config/jackett:/config<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-34-7"><a id="__codelineno-34-7" name="__codelineno-34-7" href="#__codelineno-34-7"></a><span class="w">    </span>-v<span class="w"> </span>/mnt/data/media/downloads:/downloads<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-34-8"><a id="__codelineno-34-8" name="__codelineno-34-8" href="#__codelineno-34-8"></a><span class="w">    </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-34-9"><a id="__codelineno-34-9" name="__codelineno-34-9" href="#__codelineno-34-9"></a><span class="w">    </span>lscr.io/linuxserver/jackett:latest
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>jackett<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/jackett.service
-</span><span id="__span-29-2"><a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a>
-</span><span id="__span-29-3"><a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>jackett.service
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>jackett<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/jackett.service
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>jackett.service
 </span></code></pre></div>
 <h3 id="glances">Glances</h3>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>glances<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-30-2"><a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="w">    </span>--restart<span class="o">=</span><span class="s2">&quot;always&quot;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-30-3"><a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">61208</span>-61209:61208-61209<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-30-4"><a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">TZ</span><span class="o">=</span>Europe/Madrid<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-30-5"><a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">GLANCES_OPT</span><span class="o">=</span><span class="s2">&quot;-w&quot;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-30-6"><a id="__codelineno-30-6" name="__codelineno-30-6" href="#__codelineno-30-6"></a><span class="w">    </span>-v<span class="w"> </span>/run/user/1000/podman/podman.sock:/run/user/1000/podman/podman.sock:ro<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-30-7"><a id="__codelineno-30-7" name="__codelineno-30-7" href="#__codelineno-30-7"></a><span class="w">    </span>--pid<span class="w"> </span>host<span class="w"> </span>nicolargo/glances:latest-full
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>glances<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="w">    </span>--restart<span class="o">=</span><span class="s2">&quot;always&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">61208</span>-61209:61208-61209<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">TZ</span><span class="o">=</span>Europe/Madrid<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">GLANCES_OPT</span><span class="o">=</span><span class="s2">&quot;-w&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a><span class="w">    </span>-v<span class="w"> </span>/run/user/1000/podman/podman.sock:/run/user/1000/podman/podman.sock:ro<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-36-7"><a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a><span class="w">    </span>--pid<span class="w"> </span>host<span class="w"> </span>nicolargo/glances:latest-full
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>glances<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/glances.service
-</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>
-</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>glances.service
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>glances<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/glances.service
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>glances.service
 </span></code></pre></div>
 <h3 id="watchtower">Watchtower</h3>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>watchtower<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="w">    </span>-v<span class="w"> </span>/var/run/user/1000/podman/podman.sock:/var/run/docker.sock<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="w">    </span>docker.io/containrrr/watchtower<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="w">    </span>--cleanup<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-32-5"><a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="w">    </span>--schedule<span class="w"> </span><span class="s2">&quot;0 0 4 * * 0&quot;</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>watchtower<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a><span class="w">    </span>-v<span class="w"> </span>/var/run/user/1000/podman/podman.sock:/var/run/docker.sock<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a><span class="w">    </span>docker.io/containrrr/watchtower<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a><span class="w">    </span>--cleanup<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a><span class="w">    </span>--schedule<span class="w"> </span><span class="s2">&quot;0 0 4 * * 0&quot;</span>
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>watchtower<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/watchtower.service
-</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>
-</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>watchtower.service
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>watchtower<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/watchtower.service
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>watchtower.service
 </span></code></pre></div>
 <h3 id="minecraft-server">Minecraft server</h3>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>mcserver-paper<span class="w"> </span>-v<span class="w"> </span>/config/mcserver:/data<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">TYPE</span><span class="o">=</span>PAPER<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">MEMORY</span><span class="o">=</span>10G<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">25565</span>:25565<span class="w"> </span>-e<span class="w"> </span><span class="nv">EULA</span><span class="o">=</span>TRUE<span class="w"> </span>docker.io/itzg/minecraft-server
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>mcserver-paper<span class="w"> </span>-v<span class="w"> </span>/config/mcserver:/data<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">TYPE</span><span class="o">=</span>PAPER<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">MEMORY</span><span class="o">=</span>10G<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="w">    </span>-p<span class="w"> </span><span class="m">25565</span>:25565<span class="w"> </span>-e<span class="w"> </span><span class="nv">EULA</span><span class="o">=</span>TRUE<span class="w"> </span>docker.io/itzg/minecraft-server
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>mcserver-paper<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/mcserver.service
-</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>
-</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>mcserver.service
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>mcserver-paper<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/mcserver.service
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>mcserver.service
 </span></code></pre></div>
 <h4 id="playitt">Playitt</h4>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>podman<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>playitgg
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>podman<span class="w"> </span>volume<span class="w"> </span>create<span class="w"> </span>playitgg
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="w"> </span>--name<span class="w"> </span>playitgg<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w"> </span>-v<span class="w"> </span>playitgg:/app<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="w"> </span>docker.io/pepaondrugs/playitgg-docker:latest
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="w"> </span>--name<span class="w"> </span>playitgg<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-43-3"><a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a><span class="w"> </span>-v<span class="w"> </span>playitgg:/app<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-43-4"><a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a><span class="w"> </span>docker.io/pepaondrugs/playitgg-docker:latest
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>playitgg<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/playitgg.service
-</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>
-</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>playitgg.service
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>playitgg<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/playitgg.service
+</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>
+</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>playitgg.service
 </span></code></pre></div>
 <h3 id="my-own-podmandocker-images">My own podman/docker images</h3>
 <h4 id="podman-registry">Podman registry</h4>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>podman run -d -p 5000:5000 --restart=always --name registry registry:2
+<div class="language-text highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>podman run -d -p 5000:5000 --restart=always --name registry registry:2
 </span></code></pre></div>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>podman generate systemd --new --name registry &gt; ~/.config/systemd/user/registry.service
+<div class="language-text highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>podman generate systemd --new --name registry &gt; ~/.config/systemd/user/registry.service
 </span></code></pre></div>
 <h4 id="pablo-bot">Pablo bot</h4>
 <blockquote>
 <p>My telegram bot</p>
 </blockquote>
 <h5 id="on-my-dev-machine">On my dev machine</h5>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>podman<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>pablo-bot<span class="w"> </span>.
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>podman<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>pablo-bot<span class="w"> </span>.
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>podman<span class="w"> </span>tag<span class="w"> </span>localhost/pablo-bot<span class="w"> </span><span class="m">192</span>.168.1.119:5000/pablo-bot
-</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>podman<span class="w"> </span>push<span class="w"> </span>--tls-verify<span class="o">=</span><span class="nb">false</span><span class="w"> </span><span class="m">192</span>.168.1.119:5000/pablo-bot
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-48-1"><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>podman<span class="w"> </span>tag<span class="w"> </span>localhost/pablo-bot<span class="w"> </span><span class="m">192</span>.168.1.119:5000/pablo-bot
+</span><span id="__span-48-2"><a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>podman<span class="w"> </span>push<span class="w"> </span>--tls-verify<span class="o">=</span><span class="nb">false</span><span class="w"> </span><span class="m">192</span>.168.1.119:5000/pablo-bot
 </span></code></pre></div>
 <h5 id="on-my-server">On my server</h5>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>podman pull --tls-verify=false localhost:5000/pablo-bot
+<div class="language-text highlight"><pre><span></span><code><span id="__span-49-1"><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a>podman pull --tls-verify=false localhost:5000/pablo-bot
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-44-1"><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>pablo-bot<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-44-2"><a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="w">    </span>--tls-verify<span class="o">=</span><span class="nb">false</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-44-3"><a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="w">    </span>-v<span class="w"> </span>/config/pablo-bot/config.ini:/pablo-bot/config.ini<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-44-4"><a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="w">    </span>localhost:5000/pablo-bot
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-50-1"><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>pablo-bot<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-50-2"><a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a><span class="w">    </span>--tls-verify<span class="o">=</span><span class="nb">false</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-50-3"><a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="w">    </span>-v<span class="w"> </span>/config/pablo-bot/config.ini:/pablo-bot/config.ini<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-50-4"><a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="w">    </span>localhost:5000/pablo-bot
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-45-1"><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>pablo-bot<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/pablo-bot.service
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-51-1"><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>pablo-bot<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/pablo-bot.service
+</span></code></pre></div>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-52-1"><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a>systemctl<span class="w"> </span>--user<span class="w"> </span>restart<span class="w"> </span>pablo-bot.service
 </span></code></pre></div>
 <h4 id="calibre-tg-bot">Calibre-tg-bot</h4>
 <p>My own telegram bot that interacts with calibre library, it can add new books to the database and query books from the library.</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-46-1"><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>calibre-tg-bot<span class="w"> </span>--volume<span class="w"> </span>/config/calibre-web/library:/calibre-tg-bot/books<span class="w"> </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span>calibre-tg-bot
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-53-1"><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>podman<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>calibre-tg-bot<span class="w"> </span>--volume<span class="w"> </span>/config/calibre-web/library:/calibre-tg-bot/books<span class="w"> </span>--restart<span class="w"> </span>unless-stopped<span class="w"> </span>calibre-tg-bot
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-47-1"><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>calibre-tg-bot<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/calibre-tg-bot.service
-</span><span id="__span-47-2"><a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>
-</span><span id="__span-47-3"><a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>calibre-tg-bot.service
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-54-1"><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>podman<span class="w"> </span>generate<span class="w"> </span>systemd<span class="w"> </span>--new<span class="w"> </span>--name<span class="w"> </span>calibre-tg-bot<span class="w"> </span>&gt;<span class="w"> </span>~/.config/systemd/user/calibre-tg-bot.service
+</span><span id="__span-54-2"><a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a>
+</span><span id="__span-54-3"><a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a>systemctl<span class="w"> </span>--user<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>calibre-tg-bot.service
 </span></code></pre></div>
 
 
