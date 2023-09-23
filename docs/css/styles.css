@@ -11,11 +11,9 @@ article a:hover {
     text-decoration: underline;
 }
 
-body[data-md-color-scheme="default"] {
-    article a {
-        background-color: #ffc105;
-        color: #232020 !important;
-    }
+body[data-md-color-scheme="default"] article a:not(.md-meta__link) {
+    background-color: #ffc10588;
+    color: #232020 !important;
 }
 
 .image {

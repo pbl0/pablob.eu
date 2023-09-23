@@ -232,6 +232,67 @@ podman generate systemd --new --name jellyfin > ~/.config/systemd/user/jellyfin.
 systemctl --user enable jellyfin.service
 ```
 
+### Immich
+
+Monolithic version from https://github.com/imagegenius/docker-immich/
+
+```sh
+podman run -d \
+  --name=immich \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=Europe/Madrid \
+  -e DB_HOSTNAME=192.168.1.119 \
+  -e DB_USERNAME=postgres \
+  -e DB_PASSWORD=postgres \
+  -e DB_DATABASE_NAME=immich \
+  -e REDIS_HOSTNAME=192.168.1.119 \
+  -e DISABLE_TYPESENSE=false \
+  -p 2283:8080 \
+  -v /config/immich:/config \
+  -v /home/pablo/immich-app/library:/photos \
+  --restart unless-stopped \
+  ghcr.io/imagegenius/immich:latest
+```
+
+```sh
+podman generate systemd --new --name immich > ~/.config/systemd/user/immich.service
+
+systemctl --user enable immich.service
+```
+
+This container requires two other containers to be run:
+#### Redis
+```sh
+podman run -d \
+  --name=redis \
+  -p 6379:6379 \
+  docker.io/redis
+```
+
+```sh
+podman generate systemd --new --name redis > ~/.config/systemd/user/redis.service
+
+systemctl --user enable redis.service
+```
+
+####  Postgres
+```
+podman run -d \
+  --name=postgres14 \
+  -e POSTGRES_USER=postgres \
+  -e POSTGRES_PASSWORD=postgres \
+  -e POSTGRES_DB=immich \
+  -v path_to_postgres:/var/lib/postgresql/data \
+  -p 5432:5432 \
+  docker.io/postgres:14
+```
+
+```sh
+podman generate systemd --new --name postgres14 > ~/.config/systemd/user/postgres14.service
+
+systemctl --user enable postgres14.service
+```
 ### Radarr
 
 ```sh
@@ -439,6 +500,10 @@ podman run -d --name pablo-bot \
 
 ```sh
 podman generate systemd --new --name pablo-bot > ~/.config/systemd/user/pablo-bot.service
+```
+
+```sh
+systemctl --user restart pablo-bot.service
 ```
 
 #### Calibre-tg-bot
