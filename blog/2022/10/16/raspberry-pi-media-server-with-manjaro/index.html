@@ -1363,14 +1363,12 @@
 </li>
 <li>
 <p>Update mirrors &amp; installed packages</p>
-</li>
-</ol>
 <p><code>sudo pacman-mirrors --fasttrack &amp;&amp; sudo pacman -Syyu</code></p>
-<ol>
-<li>Install network manager</li>
-</ol>
+</li>
+<li>
+<p>Install network manager</p>
 <p><code>sudo pacman -S networkmanager</code></p>
-<ol>
+</li>
 <li>
 <p>Connect to wifi using 'nmtui'</p>
 </li>
@@ -1389,36 +1387,54 @@
 <ul>
 <li>
 <p>Portainer</p>
-</li>
-<li>
-<p><code>sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce</code></p>
+<ul>
+<li><code>sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce</code></li>
+</ul>
 </li>
 <li>
 <p>Radarr</p>
-</li>
+<ul>
 <li><code>sudo docker run -d --name=radarr -e PUID=1000 -e PGID=1000 -e TZ=Europe/Madrid -p 7878:7878 -v /home/pablo/config/radarr:/config --mount source=jellynfs,target=/data --restart unless-stopped lscr.io/linuxserver/radarr</code></li>
-<li>Sonarr</li>
+</ul>
+</li>
+<li>Sonarr<ul>
 <li><code>sudo docker run -d --name=sonarr -e PUID=1000 -e PGID=1000 -e TZ=Europe/Madrid -p 8989:8989 -v /home/pablo/config/sonarr:/config --mount source=jellynfs,target=/data --restart unless-stopped lscr.io/linuxserver/sonarr:latest</code></li>
-<li>Transmission</li>
+</ul>
+</li>
+<li>Transmission<ul>
 <li><code>sudo docker run -d --name=transmission -e PUID=1000 -e PGID=1000 -e TZ=Europe/Madrid -e USER=pablo -e PASS=password -p 9091:9091 -p 51413:51413 -p 51413:51413/udp -v /home/pablo/config/transmission:/config -v /mnt/data/Downloads:/data/Downloads --restart unless-stopped lscr.io/linuxserver/transmission:latest</code></li>
-<li>Jackett</li>
+</ul>
+</li>
+<li>Jackett<ul>
 <li><code>sudo docker run -d --name=jackett -e PUID=1000 -e PGID=1000 -e TZ=Europe/Madrid -e AUTO_UPDATE=true -p 9117:9117 -v /home/pablo/config/jackett:/config -v /mnt/data/Downloads:/downloads --restart unless-stopped lscr.io/linuxserver/jackett:latest</code></li>
-<li>Homer</li>
+</ul>
+</li>
+<li>Homer<ul>
 <li><code>sudo docker run -d --name=homer -e UID=1000 -e GID=1000 -p 80:8080 -v /home/pablo/config/homer:/www/assets --restart=unless-stopped b4bz/homer:latest</code></li>
-<li>Calibre-web</li>
+</ul>
+</li>
+<li>Calibre-web<ul>
 <li><code>sudo docker run -d --name=calibre-web -e PUID=1000 -e PGID=1000 -e TZ=Europe/Madrid -e DOCKER_MODS=linuxserver/calibre-web:calibre -p 8083:8083 -v /home/pablo/config/calibre:/config -v /mnt/data/pi-calibre-library:/books --restart unless-stopped lscr.io/linuxserver/calibre-web:latest</code></li>
-<li>Immich</li>
+</ul>
+</li>
+<li>Immich<ul>
 <li>Install following the <a href="https://github.com/immich-app/immich#custom-installation-recommended">official documentation</a>.</li>
-<li>Monerod</li>
+</ul>
+</li>
+<li>Monerod<ul>
 <li><code>sudo docker  run -d --restart unless-stopped --name="monerod" -p 18080:18080 -p 18089:18089 -v bitmonero:/home/monero sethsimmons/simple-monerod:latest  --rpc-restricted-bind-ip=0.0.0.0 --rpc-restricted-bind-port=18089 --no-igd --no-zmq --enable-dns-blocklist --prune-blockchain</code></li>
+</ul>
+</li>
 </ul>
 <hr />
 <h3 id="other-packages">Other packages</h3>
 <p>Some packages I installed from Manjaro's repositories.</p>
 <ol>
-<li>Cockpit - an admin panel for the server, useful to see systemd services logs among other things (port 9090).</li>
+<li>Cockpit - an admin panel for the server, useful to see systemd services logs among other things (port 9090).<ul>
 <li><code>sudo pacman -S cockpit</code></li>
 <li>For some reason I started having issues accessing cockpit with Firefox but it's fine on Chromium based browsers.</li>
+</ul>
+</li>
 <li>I've also set up some telegram bots, using <a href="https://unixcop.com/how-to-create-a-systemd-service-in-linux/">systemd</a>.</li>
 </ol>
 <hr />
@@ -1427,36 +1443,40 @@
 <h3 id="no-longer-using">No longer using:</h3>
 <p>Plex is nice but I no longer use it in favour of Jellyfin, mostly because Plex doesn't work without internet connection. (which I run in another machine giving access to the server through nfs).</p>
 <ul>
-<li>Plex</li>
+<li>Plex<ul>
 <li><code>sudo docker run -d --name=plex --net=host -e PUID=1000 -e PGID=1000 -e VERSION=latest -v /home/pablo/config/plex:/config -v "/mnt/data/Videos/TV Shows":/tv -v /mnt/data/Videos/Movies:/movies --restart unless-stopped lscr.io/linuxserver/plex:latest</code></li>
+</ul>
+</li>
 </ul>
 <p><em>Previous configurations used without nfs:</em></p>
 <ul>
 <li>
 <p>Radarr</p>
-</li>
-<li>
-<p><code>sudo docker run -d --name=radarr -e PUID=1000 -e PGID=1000 -e TZ=Europe/Madrid -p 7878:7878 -v /home/pablo/config/radarr:/config -v /mnt/data:/data --restart unless-stopped lscr.io/linuxserver/radarr</code></p>
+<ul>
+<li><code>sudo docker run -d --name=radarr -e PUID=1000 -e PGID=1000 -e TZ=Europe/Madrid -p 7878:7878 -v /home/pablo/config/radarr:/config -v /mnt/data:/data --restart unless-stopped lscr.io/linuxserver/radarr</code></li>
+</ul>
 </li>
 <li>
 <p>Sonarr</p>
-</li>
-<li>
-<p><code>sudo docker run -d --name=sonarr -e PUID=1000 -e PGID=1000 -e TZ=Europe/Madrid -p 8989:8989 -v /home/pablo/config/sonarr:/config -v /mnt/data:/data --restart unless-stopped lscr.io/linuxserver/sonarr:latest</code></p>
+<ul>
+<li><code>sudo docker run -d --name=sonarr -e PUID=1000 -e PGID=1000 -e TZ=Europe/Madrid -p 8989:8989 -v /home/pablo/config/sonarr:/config -v /mnt/data:/data --restart unless-stopped lscr.io/linuxserver/sonarr:latest</code></li>
+</ul>
 </li>
 <li>
 <p>Transmission</p>
-</li>
-<li>
-<p><code>sudo docker run -d --name=transmission -e PUID=1000 -e PGID=1000 -e TZ=Europe/Madrid -e USER=pablo -e PASS=password -p 9091:9091 -p 51413:51413 -p 51413:51413/udp -v /home/pablo/config/transmission:/config -v /mnt/data/Downloads:/data/Downloads --restart unless-stopped lscr.io/linuxserver/transmission:latest</code></p>
+<ul>
+<li><code>sudo docker run -d --name=transmission -e PUID=1000 -e PGID=1000 -e TZ=Europe/Madrid -e USER=pablo -e PASS=password -p 9091:9091 -p 51413:51413 -p 51413:51413/udp -v /home/pablo/config/transmission:/config -v /mnt/data/Downloads:/data/Downloads --restart unless-stopped lscr.io/linuxserver/transmission:latest</code></li>
+</ul>
 </li>
 <li>
 <p>Syncthing - to sync folders and files across different devices on my LAN (port 8384).
-  Install and enable in each device:</p>
-</li>
+    Install and enable in each device:</p>
+<ul>
 <li><code>sudo pacman -S syncthing</code></li>
 <li><code>sudo systemctl enable syncthing@pablo.service</code></li>
 <li><code>sudo systemctl start syncthing@pablo.service</code></li>
+</ul>
+</li>
 </ul>
 
 
@@ -1464,6 +1484,61 @@
   
 
 
+
+<h2 id="__comments">Comments</h2>
+<!-- Insert generated snippet here -->
+<script
+    src="https://giscus.app/client.js"
+    data-repo="pbl0/pablob.eu"
+    data-repo-id="R_kgDOKTnaMQ"
+    data-category="Comments"
+    data-category-id="DIC_kwDOKTnaMc4CZlJp"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="light"
+    data-lang="en"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+></script>
+<!-- Synchronize Giscus theme with palette -->
+<script>
+    var giscus = document.querySelector("script[src*=giscus]");
+
+    // Set palette on initial load
+    var palette = __md_get("__palette");
+    if (palette && typeof palette.color === "object") {
+        var theme =
+            palette.color.scheme === "slate" ? "transparent_dark" : "light";
+
+        // Instruct Giscus to set theme
+        giscus.setAttribute("data-theme", theme);
+    }
+
+    // Register event handlers after documented loaded
+    document.addEventListener("DOMContentLoaded", function () {
+        var ref = document.querySelector("[data-md-component=palette]");
+        ref.addEventListener("change", function () {
+            var palette = __md_get("__palette");
+            if (palette && typeof palette.color === "object") {
+                var theme =
+                    palette.color.scheme === "slate"
+                        ? "transparent_dark"
+                        : "light";
+
+                // Instruct Giscus to change theme
+                var frame = document.querySelector(".giscus-frame");
+                frame.contentWindow.postMessage(
+                    { giscus: { setConfig: { theme } } },
+                    "https://giscus.app"
+                );
+            }
+        });
+    });
+</script>
 
       
     </article>
