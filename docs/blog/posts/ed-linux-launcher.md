@@ -1,14 +1,13 @@
 ---
 description: >
-  Elite Dangerous used to be playable out the box using Steam proton but now it isn't"
+    Elite Dangerous used to be playable out the box using Steam proton but now it isn't"
 date: 2023-01-25T23:40:00.000Z
-width: "2560"
-height: "1440"
 categories:
-  - Games
-  - Linux
+    - Games
+    - Linux
 authors:
-  - pablo
+    - pablo
+comments: true
 ---
 
 # How to fix Elite Dangerous launcher issues on Linux

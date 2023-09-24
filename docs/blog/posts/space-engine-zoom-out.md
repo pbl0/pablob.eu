@@ -1,11 +1,12 @@
 ---
 description: >
-  This game is incredible. Here is yet another space engine zoom out video. Enjoy the ride!
+    This game is incredible. Here is yet another space engine zoom out video. Enjoy the ride!
 date: 2022-04-11T20:50:03.284Z
 categories:
-  - Games
+    - Games
 authors:
-  - pablo
+    - pablo
+comments: true
 ---
 
 # Space engine zoom-out time lapse

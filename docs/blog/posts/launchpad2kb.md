@@ -1,12 +1,13 @@
 ---
 description: >
-  A linux CLI tool to map keyboard hotkeys with the Novation Launchpad device.
+    A linux CLI tool to map keyboard hotkeys with the Novation Launchpad device.
 date: 2022-08-21T20:40:00.000Z
 categories:
-  - Linux
-  - Tech
+    - Linux
+    - Tech
 authors:
-  - pablo
+    - pablo
+comments: true
 ---
 
 # Launchpad2KB
@@ -56,42 +57,42 @@ Example:
 ```yaml
 - cell: 112
   keys:
-    - "ctrl"
-    - "shift"
-    - "e"
+      - "ctrl"
+      - "shift"
+      - "e"
   color: 120
 ```
 
 This will bind the cell 112 to trigger `CTRL+SHIFT+E` when pressed.
 
-- `cell` indicates the cell number (see image below).
-- `keys` are the keyboard keys to be pressed. [Keys reference](/assets/blog/launchpad2kb/key_names_reference.json).
-- `color` is a number ranging from 0 to 127.
+-   `cell` indicates the cell number (see image below).
+-   `keys` are the keyboard keys to be pressed. [Keys reference](/assets/blog/launchpad2kb/key_names_reference.json).
+-   `color` is a number ranging from 0 to 127.
 
 Example of multiple cells:
 
 ```yaml
 - cell: 112
   keys:
-    - "ctrl"
-    - "shift"
-    - "e"
+      - "ctrl"
+      - "shift"
+      - "e"
   color: 120
 - cell: 113
   keys:
-    - "ctrl"
-    - "shift"
-    - "f"
+      - "ctrl"
+      - "shift"
+      - "f"
   color: 80
 - cell: 113
   keys:
-    - "f"
+      - "f"
   color: 60
 ```
 
 ### Run from source
 
-- Create virtual enviroment & install dependencies
+-   Create virtual enviroment & install dependencies
 
 ```sh
 virtualenv env
@@ -99,7 +100,7 @@ source env/bin/activate
 pìp install -r requirements.txt
 ```
 
-- Tkinter is also required:
+-   Tkinter is also required:
 
 **Arch linux**
 

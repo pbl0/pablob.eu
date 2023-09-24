@@ -1,15 +1,16 @@
 ---
 description: >
-  Just showing off some visual mods, dynamic weather and my bad driving.
+    Just showing off some visual mods, dynamic weather and my bad driving.
 
 date: 2023-02-20T22:50:03.284Z
 
 width: "1902"
 height: "1047"
 categories:
-  - Games
+    - Games
 authors:
-  - pablo
+    - pablo
+comments: true
 ---
 
 # Learning how to drive in Assetto Corsa
@@ -28,7 +29,7 @@ Just showing off some visual mods, dynamic weather and my bad driving. My comput
 
 ## Mods used
 
-- [CSP](https://acstuff.ru/patch/)
-- [Pure](https://www.patreon.com/peterboese?l=es)
-- [RainFX (CSP preview)](https://www.patreon.com/x4fab)
-- Track: [Feldbergring](https://www.racedepartment.com/downloads/feldbergring.21195/)
+-   [CSP](https://acstuff.ru/patch/)
+-   [Pure](https://www.patreon.com/peterboese?l=es)
+-   [RainFX (CSP preview)](https://www.patreon.com/x4fab)
+-   Track: [Feldbergring](https://www.racedepartment.com/downloads/feldbergring.21195/)

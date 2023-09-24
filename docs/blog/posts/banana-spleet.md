@@ -1,12 +1,13 @@
 ---
 description: >
-  Recently I've been working on my spare time on a simple GUI app for the interesting tool called Spleeter by Deezer. Spleeter is a 'source separation library with
+    Recently I've been working on my spare time on a simple GUI app for the interesting tool called Spleeter by Deezer. Spleeter is a 'source separation library with
 date: 2022-01-02T18:30:00.000Z
 categories:
-  - Music
-  - Linux
+    - Music
+    - Linux
 authors:
-  - pablo
+    - pablo
+comments: true
 ---
 
 # Banana Spleet

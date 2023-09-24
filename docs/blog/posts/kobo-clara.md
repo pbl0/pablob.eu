@@ -1,16 +1,14 @@
 ---
 description: >
-  For some time I've been trying to recover the habit of reading. For some reason I thought that the best way of accomplishing that was to buy an eReader device.
+    For some time I've been trying to recover the habit of reading. For some reason I thought that the best way of accomplishing that was to buy an eReader device.
 
 date: 2022-08-13T11:48:00.000Z
-
-width: "1600"
-height: "1200"
 categories:
-  - Tech
-  - Reading
+    - Tech
+    - Reading
 authors:
-  - pablo
+    - pablo
+comments: true
 ---
 
 # My Kobo eReader

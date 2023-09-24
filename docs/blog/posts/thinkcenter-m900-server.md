@@ -9,6 +9,7 @@ categories:
     - Self-hosted
 authors:
     - pablo
+comments: true
 ---
 
 # Thinkcentre Tiny Server
@@ -262,7 +263,9 @@ systemctl --user enable immich.service
 ```
 
 This container requires two other containers to be run:
+
 #### Redis
+
 ```sh
 podman run -d \
   --name=redis \
@@ -276,7 +279,8 @@ podman generate systemd --new --name redis > ~/.config/systemd/user/redis.servic
 systemctl --user enable redis.service
 ```
 
-####  Postgres
+#### Postgres
+
 ```
 podman run -d \
   --name=postgres14 \
@@ -293,6 +297,7 @@ podman generate systemd --new --name postgres14 > ~/.config/systemd/user/postgre
 
 systemctl --user enable postgres14.service
 ```
+
 ### Radarr
 
 ```sh

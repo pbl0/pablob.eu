@@ -8,6 +8,7 @@ categories:
     - Linux
 authors:
     - pablo
+comments: true
 ---
 
 # How to install Davinci Resolve in any linux distro

@@ -1,13 +1,12 @@
 ---
 description: >
-  This the first entry on my personal blog. I've thinking for a long time on creating a blog mostly as a reminder to my own self of the stuff I do, just because I tend to forget...
+    This the first entry on my personal blog. I've thinking for a long time on creating a blog mostly as a reminder to my own self of the stuff I do, just because I tend to forget...
 date: 2021-12-29T20:50:03.284Z
-width: "1080"
-height: "810"
 authors:
-  - pablo
+    - pablo
 categories:
-  - blog
+    - blog
+comments: true
 ---
 
 # Hello World

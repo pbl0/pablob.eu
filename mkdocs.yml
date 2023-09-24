@@ -5,6 +5,7 @@ theme:
     favicon: assets/favicon/favicon.ico
     name: material
     language: en
+    custom_dir: overrides
     font:
         text: Ubuntu
         code: Ubuntu mono

@@ -1,15 +1,14 @@
 ---
 description: >
-  Another telegram bot...
+    Another telegram bot...
 
 date: 2022-09-05T18:30:00.000Z
-width: "1079"
-height: "1186"
 categories:
-  - Telegram
-  - Games
+    - Telegram
+    - Games
 authors:
-  - pablo
+    - pablo
+comments: true
 ---
 
 ## Geoguessr random challenges telegram bot
@@ -37,25 +36,25 @@ Geoguessr challenges are a great way to start playing this game as they are comp
 
 Talk to [@geo_random_bot](https://t.me/geo_random_bot)
 
-- `/random` _sends a random challenge_
+-   `/random` _sends a random challenge_
 
-- You can also specify the map, example:
+-   You can also specify the map, example:
 
-  `/random World`
+    `/random World`
 
-- `/all` _Shows a list of every challenge (Doesn't work in groups)_
+-   `/all` _Shows a list of every challenge (Doesn't work in groups)_
 
 Send a challenge link to the bot and it will be saved it on the database.
 
-- Example of a challenge link: `https://geoguessr.com/challenge/e0gOWtp7rzSKbPgw`
+-   Example of a challenge link: `https://geoguessr.com/challenge/e0gOWtp7rzSKbPgw`
 
 ## Other stuff
 
 In case you are interested in the technical aspects of the bot I've used the following python libraries:
 
-- [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot) to make the bot.
-- [firebase-admin](https://firebase.google.com/docs/firestore/quickstart) google's firestore database
-- [requests](https://requests.readthedocs.io/en/latest/) to contact [geoguessr api](https://geoguessr.com/api/) to gather the **map name** and the **rules** of the challenge.
+-   [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot) to make the bot.
+-   [firebase-admin](https://firebase.google.com/docs/firestore/quickstart) google's firestore database
+-   [requests](https://requests.readthedocs.io/en/latest/) to contact [geoguessr api](https://geoguessr.com/api/) to gather the **map name** and the **rules** of the challenge.
 
 This project took me a couple of hours to get the core functionality (store and send links) working and a couple of weeks more to polish everything else, such as showing the name of the map and the rules of the challenge, adding buttons and the complementary commands (`/start` and `/all`).
 

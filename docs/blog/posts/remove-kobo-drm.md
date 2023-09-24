@@ -1,16 +1,14 @@
 ---
 description: >
-  How to remove DRM from books downloaded on Kobo store
+    How to remove DRM from books downloaded on Kobo store
 
 date: 2023-01-14T20:05:00.000Z
-
-width: "700"
-height: "455"
 categories:
-  - Piracy
-  - Reading
+    - Piracy
+    - Reading
 authors:
-  - pablo
+    - pablo
+comments: true
 ---
 
 # Remove Kobo DRM
