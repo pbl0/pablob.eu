@@ -283,13 +283,12 @@ systemctl --user enable redis.service
 
 ```
 podman run -d \
-  --name=postgres14 \
-  -e POSTGRES_USER=postgres \
-  -e POSTGRES_PASSWORD=postgres \
-  -e POSTGRES_DB=immich \
-  -v path_to_postgres:/var/lib/postgresql/data \
-  -p 5432:5432 \
-  docker.io/postgres:14
+    --name=postgres14 \
+    -e POSTGRES_USER=postgres \
+    -e POSTGRES_PASSWORD=postgres \
+    -e POSTGRES_DB=immich \
+    -v path_to_postgres:/var/lib/postgresql/data \
+    -p 5432:5432 docker.io/tensorchord/pgvecto-rs:latest
 ```
 
 ```sh
