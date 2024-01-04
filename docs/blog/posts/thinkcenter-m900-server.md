@@ -152,7 +152,7 @@ podman run -d --name homepage \
 	-p 80:3000 \
 	-v /config/homepage:/app/config \
 	-v /var/run/user/1000/podman/podman.sock:/var/run/docker.sock \
-	ghcr.io/benphelps/homepage:latest
+	ghcr.io/gethomepage/homepage:latest
 ```
 
 ```sh
