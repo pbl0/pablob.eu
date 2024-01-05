@@ -125,26 +125,6 @@ podman generate systemd --new --name portainer > ~/.config/systemd/user/portaine
 systemctl --user enable --now portainer.service
 ```
 
-### Homarr
-
-```sh
-podman run  \
-	--name homarr \
-	--restart unless-stopped \
-	-p 7575:7575 \
-	-v /config/homarr/configs:/app/data/configs \
-	-v /config/homarr/icons:/app/public/icons \
-	-v /var/run/user/1000/podman/podman.sock:/var/run/docker.sock \
-	-d ghcr.io/ajnart/homarr:latest
-
-```
-
-```sh
-podman generate systemd --new --name homarr > ~/.config/systemd/user/homarr.service
-
-systemctl --user enable --now homarr.service
-```
-
 ### Homepage
 
 ```sh
