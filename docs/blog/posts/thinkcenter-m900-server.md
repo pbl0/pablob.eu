@@ -281,6 +281,8 @@ systemctl --user enable redis.service
 
 #### Postgres
 
+Check latest version: https://hub.docker.com/r/tensorchord/pgvecto-rs/tags?name=pg14-v0.1
+
 ```
 podman run -d \
     --name=postgres14 \
@@ -288,7 +290,7 @@ podman run -d \
     -e POSTGRES_PASSWORD=postgres \
     -e POSTGRES_DB=immich \
     -v path_to_postgres:/var/lib/postgresql/data \
-    -p 5432:5432 docker.io/tensorchord/pgvecto-rs:latest
+    -p 5432:5432 docker.io/tensorchord/pgvecto-rs:-v0.1.13
 ```
 
 ```sh
@@ -499,6 +501,7 @@ podman pull --tls-verify=false localhost:5000/pablo-bot
 podman run -d --name pablo-bot \
 	--tls-verify=false \
 	-v /config/pablo-bot/config.ini:/pablo-bot/config.ini \
+    -v /config/pablo-bot/speed.json:/pablo-bot/speed.json \
 	localhost:5000/pablo-bot
 ```
 
@@ -522,4 +525,10 @@ podman run -d --name calibre-tg-bot --volume /config/calibre-web/library:/calibr
 podman generate systemd --new --name calibre-tg-bot > ~/.config/systemd/user/calibre-tg-bot.service
 
 systemctl --user enable calibre-tg-bot.service
+```
+
+## Read logs
+
+```sh
+podman logs --follow container_name
 ```
