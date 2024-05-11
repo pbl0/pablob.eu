@@ -51,9 +51,12 @@ markdown_extensions:
     - pymdownx.snippets
     - pymdownx.superfences
     - def_list
+    - tables
 
 extra_css:
     - css/styles.css
+extra_javascript:
+    - js/minecraft.js
 extra:
     link_copyright: https://github.com/pbl0/
     generator: false
@@ -90,3 +93,4 @@ nav:
           - projects/geoguessr-random-bot.md
           - projects/launchpad2kb.md
           - projects/banana-spleet.md
+    - Minecraft: minecraft.md

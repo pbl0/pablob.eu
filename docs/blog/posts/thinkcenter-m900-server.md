@@ -413,10 +413,18 @@ systemctl --user enable watchtower.service
 ### Minecraft server
 
 ```sh
-podman run -d --name mcserver-paper -v /config/mcserver:/data \
-    -e TYPE=PAPER \
-    -e MEMORY=10G \
-    -p 25565:25565 -e EULA=TRUE docker.io/itzg/minecraft-server
+podman run -d --name mcserver-paper \
+        -v /config/mcserver:/data \
+        -e UID=1000 \
+        -e GID=1000 \
+        -e TYPE=PAPER \
+        -e MEMORY=12G \
+        -e USE_AIKAR_FLAGS=true \
+        -e VERSION=1.20.4 \
+        -e CREATE_CONSOLE_IN_PIPE=true \
+        -e ENABLE_RCON=false \
+        -p 25565:25565 \
+        -e EULA=TRUE docker.io/itzg/minecraft-server
 ```
 
 ```sh
