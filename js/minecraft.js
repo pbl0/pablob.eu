@@ -26,6 +26,8 @@ if (window.location.pathname.includes("minecraft")) {
             document.getElementById("minecraft-icon").src = data.icon;
             setServerAddress(data.host);
             setServerOnline(data.online);
+            document.getElementById("minecraft-player-list").textContent =
+                data.players.list.map((item) => item.name_clean).join(", ");
         } catch (error) {
             console.error("Error fetching server status:", error);
             setServerOnline(false);
