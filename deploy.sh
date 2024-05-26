@@ -10,12 +10,12 @@ file="/media/datos/Dev/pablob.eu/docs/minecraft.md"
 size_escaped=$(echo "$size" | sed 's/\//\\\//g')
 
 # Use sed to update the file in place
-sed -i "/\*\*World map size\*\*/ s/| \s*|/| ${size_escaped} |/" "$file"
+sed -i "/\*\*World size\*\*/ s/| \s*|/| ${size_escaped} |/" "$file"
 
 echo "Updated world map size to ${size} in ${file}"
 
 DATE=$(date --iso-8601);
 git add .
 git commit -m "deploy: $DATE";
-env/bin/python generate_index.py && \
-env/bin/mkdocs gh-deploy;
+.env/bin/python generate_index.py && \
+.env/bin/mkdocs gh-deploy;
