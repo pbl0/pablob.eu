@@ -11,8 +11,8 @@ file="/media/datos/Dev/pablob.eu/docs/minecraft.md"
 # Escape forward slashes in the size variable for sed
 size_escaped=$(echo "$size" | sed 's/\//\\\//g')
 
-# Use sed to update the file in place
-sed -i "/\*\*World size\*\*/ s/| \s*|/| ${size_escaped} |/" "$file"
+# update file with new world size
+sed -i "s/\(<div id=\"minecraft-world-size\">\).*\(<\/div>\)/\1$size_escaped\2/" "$file"
 
 echo "Updated world map size to ${size} in ${file}"
 

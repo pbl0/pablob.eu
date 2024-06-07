@@ -10,6 +10,6 @@ _Mostly vanilla_ survival Java minecraft server.
 | **Players online** | <span id="minecraft-players">0</span>                                           |
 | **Player list**    | <div id="minecraft-player-list"></div>                                          |
 | **Version**        | <div id="minecraft-version"></div>                                              |
-| **World size**     | 11.34 GiB                                                                       |
+| **World size**     | <div id="minecraft-world-size">11.35 GiB</div>                                           |
 | **Rules/Info**     | [Server rules](https://telegra.ph/Servidor-de-minecraft-01-30) (Spanish)        |
 | **Group chat**     | [https://t.me/+kSekwGtYOakwOGZk](https://t.me/+kSekwGtYOakwOGZk)                |
