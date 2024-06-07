@@ -3,6 +3,8 @@
 # Get the directory size in GiB with two decimal places
 size=$(ssh pablo@192.168.1.119 'du -sb /config/mcserver/world | awk "{printf \"%.2f GiB\", \$1/1024/1024/1024}"')
 
+echo $size
+
 # Define the file to be edited
 file="/media/datos/Dev/pablob.eu/docs/minecraft.md"
 
