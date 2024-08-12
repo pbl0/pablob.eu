@@ -9,6 +9,39 @@ if (window.location.pathname.includes("minecraft")) {
         document.getElementById("minecraft-address").textContent = address;
     }
 
+    function timePassed(startDate) {
+        const start = new Date(startDate);
+        const currentDate = new Date();
+
+        // Calculate the total difference in months and years
+        let totalMonths =
+            (currentDate.getFullYear() - start.getFullYear()) * 12 +
+            (currentDate.getMonth() - start.getMonth());
+        const years = Math.floor(totalMonths / 12);
+        const months = totalMonths % 12;
+
+        let result = "Running for ";
+
+        if (years > 0) {
+            result += years + " year" + (years > 1 ? "s" : "");
+        }
+
+        if (months > 0) {
+            if (years > 0) {
+                result += " and ";
+            }
+            result += months + " month" + (months > 1 ? "s" : "");
+        }
+
+        if (years === 0 && months === 0) {
+            result += "less than a month.";
+        } else {
+            result += ".";
+        }
+
+        return result;
+    }
+
     async function getServerStatus() {
         try {
             const response = await fetch(apiUrl);
@@ -32,6 +65,9 @@ if (window.location.pathname.includes("minecraft")) {
             console.error("Error fetching server status:", error);
             setServerOnline(false);
         }
+
+        timePassed("2024-03-07");
     }
+
     getServerStatus();
 }
