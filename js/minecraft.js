@@ -9,6 +9,61 @@ if (window.location.pathname.includes("minecraft")) {
         document.getElementById("minecraft-address").textContent = address;
     }
 
+    function timePassed(startDate) {
+        const start = new Date(startDate);
+        const currentDate = new Date();
+
+        // Calculate the difference in years, months, and days
+        let years = currentDate.getFullYear() - start.getFullYear();
+        let months = currentDate.getMonth() - start.getMonth();
+        let days = currentDate.getDate() - start.getDate();
+
+        // Adjust if the days are negative
+        if (days < 0) {
+            months--;
+            const previousMonth = new Date(
+                currentDate.getFullYear(),
+                currentDate.getMonth(),
+                0
+            );
+            days += previousMonth.getDate();
+        }
+
+        // Adjust if the months are negative
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
+
+        let result = "Running for ";
+
+        if (years > 0) {
+            result += years + " year" + (years > 1 ? "s" : "");
+        }
+
+        if (months > 0) {
+            if (years > 0) {
+                result += " and ";
+            }
+            result += months + " month" + (months > 1 ? "s" : "");
+        }
+
+        if (days > 0) {
+            if (years > 0 || months > 0) {
+                result += " and ";
+            }
+            result += days + " day" + (days > 1 ? "s" : "");
+        }
+
+        if (years === 0 && months === 0 && days === 0) {
+            result += "less than a day.";
+        } else {
+            result += ".";
+        }
+
+        return result;
+    }
+
     async function getServerStatus() {
         try {
             const response = await fetch(apiUrl);
@@ -33,5 +88,8 @@ if (window.location.pathname.includes("minecraft")) {
             setServerOnline(false);
         }
     }
+
     getServerStatus();
+    document.getElementById("minecraft-time-passed").textContent =
+        timePassed("2024-03-07");
 }
