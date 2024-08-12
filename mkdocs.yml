@@ -31,6 +31,7 @@ theme:
         - navigation.sections
         - navigation.tabs
         - content.code.copy
+        - content.tooltips
 
 markdown_extensions:
     - attr_list
@@ -52,6 +53,10 @@ markdown_extensions:
     - pymdownx.superfences
     - def_list
     - tables
+    - abbr
+    - pymdownx.emoji:
+          emoji_index: !!python/name:material.extensions.emoji.twemoji
+          emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 extra_css:
     - css/styles.css
