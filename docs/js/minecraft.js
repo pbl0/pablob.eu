@@ -13,12 +13,27 @@ if (window.location.pathname.includes("minecraft")) {
         const start = new Date(startDate);
         const currentDate = new Date();
 
-        // Calculate the total difference in months and years
-        let totalMonths =
-            (currentDate.getFullYear() - start.getFullYear()) * 12 +
-            (currentDate.getMonth() - start.getMonth());
-        const years = Math.floor(totalMonths / 12);
-        const months = totalMonths % 12;
+        // Calculate the difference in years, months, and days
+        let years = currentDate.getFullYear() - start.getFullYear();
+        let months = currentDate.getMonth() - start.getMonth();
+        let days = currentDate.getDate() - start.getDate();
+
+        // Adjust if the days are negative
+        if (days < 0) {
+            months--;
+            const previousMonth = new Date(
+                currentDate.getFullYear(),
+                currentDate.getMonth(),
+                0
+            );
+            days += previousMonth.getDate();
+        }
+
+        // Adjust if the months are negative
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
 
         let result = "Running for ";
 
@@ -33,8 +48,15 @@ if (window.location.pathname.includes("minecraft")) {
             result += months + " month" + (months > 1 ? "s" : "");
         }
 
-        if (years === 0 && months === 0) {
-            result += "less than a month.";
+        if (days > 0) {
+            if (years > 0 || months > 0) {
+                result += " and ";
+            }
+            result += days + " day" + (days > 1 ? "s" : "");
+        }
+
+        if (years === 0 && months === 0 && days === 0) {
+            result += "less than a day.";
         } else {
             result += ".";
         }
@@ -65,9 +87,9 @@ if (window.location.pathname.includes("minecraft")) {
             console.error("Error fetching server status:", error);
             setServerOnline(false);
         }
-
-        timePassed("2024-03-07");
     }
 
     getServerStatus();
+    document.getElementById("minecraft-time-passed").textContent =
+        timePassed("2024-03-07");
 }

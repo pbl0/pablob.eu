@@ -1,6 +1,7 @@
 # Minecraft server
 
-_Vanilla_ survival **Java** and **Bedrock** Minecraft server with some plugins. <span></span>
+_Vanilla_ survival **Java** and **Bedrock** Minecraft server with some plugins.
+_<span id="minecraft-time-passed"></span>_
 
 |                    |                                                                                 |
 | ------------------ | ------------------------------------------------------------------------------- |
@@ -16,4 +17,4 @@ _Vanilla_ survival **Java** and **Bedrock** Minecraft server with some plugins. 
 | **Rules/Info**     | [Server rules](https://telegra.ph/Servidor-de-minecraft-01-30) (Spanish)        |
 | **Group chat**     | [https://t.me/+kSekwGtYOakwOGZk](https://t.me/+kSekwGtYOakwOGZk)                |
 
-\*[Bedrock]: Cross-play between Java and Bedrock thanks to Geyser plugin.
+*[Bedrock]: Cross-play between Java and Bedrock thanks to Geyser plugin.
