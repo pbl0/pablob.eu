@@ -71,7 +71,7 @@ extra:
         - icon: fontawesome/brands/telegram
           link: https://t.me/pablobls
         - icon: fontawesome/brands/youtube
-          link: https://www.youtube.com/@pbl0_o
+          link: https://www.youtube.com/@pbl0_o?sub_confirmation=1
 
 plugins:
     - search
@@ -89,7 +89,7 @@ nav:
           - Socials:
                 - Github ↪: https://github.com/pbl0
                 - Telegram ↪: https://t.me/pablobls
-                - Youtube ↪: https://www.youtube.com/@pbl0_o
+                - Youtube ↪: https://www.youtube.com/@pbl0_o?sub_confirmation=1
     - My projects:
           - code.md
           - RR Tools ↪: https://rr-tools.eu/
