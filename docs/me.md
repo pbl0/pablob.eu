@@ -1,8 +1,8 @@
-I'm Pablo, a programmer and this is my website. Professionally I've worked as a frontend developer, mostly with Angular, but from time to time I also mess around with Python, React, Godot and a few others. Besides computers and programming I also love [listening](/music) (and sometimes pretending to play) music, playing video-games and reading books. I also have fun with some gardening and taking random pictures of the sky and nature. Oh, I also like dogs, of course.
+I'm Pablo and this is my website. I like doing all sort of stuff, mostly tech related stuff. Besides tinkering with computers, I also love [listening](/music) (and sometimes pretending to play) music, playing video-games and reading books. I also have some fun with gardening and taking random pictures of the night sky and nature from time to time. Oh, I also like dogs, of course.
 
-## [Some hobby projects I've made](/code)
+## [Some coding projects I've made](/code)
 
-## Some fancy stats
+## Some fancy github stats
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs?username=pbl0&hide=hack,tsql,php,swift,ruby&layout=compact&langs_count=8&theme=github_dark)](https://github.com/pbl0)
 [![Top Langs](https://github-readme-stats.vercel.app/api?username=pbl0&theme=github_dark&show_icons=true&count_private=true)](https://github.com/pbl0)
