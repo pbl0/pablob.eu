@@ -43,7 +43,7 @@ You will probably better off following MinEdLauncher [documentation](https://git
 Then launch the game and enjoy.
 
 <figure markdown>
-  ![minedlauncher](/assets/blog/minedlauncher/minedlauncher.png){ .image loading=lazy }
+  ![minedlauncher](/assets/blog/minedlauncher/minedlauncher.jpg){ .image loading=lazy }
   <figcaption>Minimal Launcher</figcaption>
 </figure>
 
