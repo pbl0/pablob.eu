@@ -44,8 +44,7 @@ def list_and_sort_markdown_files(directory):
 def create_index_file(sorted_files, output_file):
     with open(output_file, 'w', encoding='utf-8') as md_file:
         md_file.write("# pablo's docs\n\n")
-        md_file.write("## Recent Posts\n\n")
-        
+        md_file.write("## Latest posts\n\n")
         # Add a list of the 5 most recent files with their titles
         for file, _, title in sorted_files[:5]:
             blog_path = file.replace('docs/', '')
