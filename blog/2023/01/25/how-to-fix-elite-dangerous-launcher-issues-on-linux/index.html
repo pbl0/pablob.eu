@@ -1442,22 +1442,22 @@
 
 
 <h1 id="how-to-fix-elite-dangerous-launcher-issues-on-linux">How to fix Elite Dangerous launcher issues on Linux</h1>
-<p>Elite Dangerous used to be playable out the box using Steam Proton but for some reason in the last few years it has become an immense hassle to play Elite Dangerous on Linux. While the game itself runs fine most of the times the launcher itself it's the one causing issues and it's completely broken under Linux.</p>
+<p>Elite Dangerous used to be playable out the box using Steam Proton but for some reason in the last few years it has become an immense hassle to play Elite Dangerous on Linux. While the game itself runs fine most of the times the launcher it's the one causing issues because it's completely broken under Linux.</p>
 <!-- more -->
 
 <figure>
 <p><a class="glightbox" href="/assets/blog/minedlauncher/cover.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Post cover" class="cover image" loading="lazy" src="/assets/blog/minedlauncher/cover.png" /></a></p>
 </figure>
 <p>Sadly, Frontier Developments doesn't seem to care enough about Linux users, so we might need to try many of the solutions that users have suggested at <a href="https://www.protondb.com/app/359320">protondb</a> and see if anything works, which in my case they never did, except one.</p>
-<p>After many months of not being able to launch the game, I randomly found out that there is a third-party launcher called <a href="https://github.com/rfvgyhn/min-ed-launcher/">min-ed-launcher</a> (<em>Minimal Elite Dangerous Launcher</em>) that replaces the original launcher and runs directly from terminal. And it just works!</p>
+<p>After many months of not being able to launch the game, I randomly came across to an unofficial CLI launcher called <a href="https://github.com/rfvgyhn/min-ed-launcher/">min-ed-launcher</a> (<em>Minimal Elite Dangerous Launcher</em>) which replaces the original launcher and allows us to launch the game directly from the terminal or through steam. And it really just works!</p>
 <h2 id="how-to-install-min-ed-launcher">How to install Min-Ed-Launcher</h2>
-<p>You can simply <a href="https://github.com/rfvgyhn/min-ed-launcher/releases/latest">download it</a> from their github but in my case I got it from the <a href="https://aur.archlinux.org/packages?O=0&amp;K=min-ed-launcher">AUR</a>.</p>
+<p>You can <a href="https://github.com/rfvgyhn/min-ed-launcher/releases/latest">download it</a> from their github but in my case I got it from the <a href="https://aur.archlinux.org/packages?O=0&amp;K=min-ed-launcher">AUR</a>.</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>yay<span class="w"> </span>-S<span class="w"> </span>min-ed-launcher-bin
 </span></code></pre></div>
 <p>Next I've changed the game Launch Options on Steam to launch Elite Dangerous Odyssey expansion using Konsole and <a href="https://wiki.archlinux.org/title/PRIME">prime-run</a>:</p>
 <div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>konsole<span class="w"> </span>-e<span class="w"> </span>prime-run<span class="w"> </span>MinEdLauncher<span class="w"> </span>%command%<span class="w"> </span>/autorun<span class="w"> </span>/autoquit<span class="w"> </span>/edo
 </span></code></pre></div>
-<p>You will probably better off when you read MinEdLauncher <a href="https://github.com/rfvgyhn/min-ed-launcher#readme">documentation</a> and set up to your own configuration.</p>
+<p>You will probably better off following MinEdLauncher <a href="https://github.com/rfvgyhn/min-ed-launcher#readme">documentation</a> and set it up to your own configuration.</p>
 <p>Then launch the game and enjoy.</p>
 <figure>
 <p><a class="glightbox" href="/assets/blog/minedlauncher/minedlauncher.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="minedlauncher" class="image" loading="lazy" src="/assets/blog/minedlauncher/minedlauncher.png" /></a>
