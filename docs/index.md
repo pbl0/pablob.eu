@@ -1,6 +1,6 @@
 # pablo's docs
 
-## Recent Posts
+## Latest posts
 
 - September 13, 2023 - [Thinkcentre Tiny Server](blog/posts/thinkcenter-m900-server.md)
 - August 27, 2023 - [How to install Davinci Resolve in any linux distro](blog/posts/davinci-install.md)

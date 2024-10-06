@@ -8,7 +8,7 @@ I'm Pablo and this is my website. I like doing all sort of stuff, mostly tech re
 [![Top Langs](https://github-readme-stats.vercel.app/api?username=pbl0&theme=github_dark&show_icons=true&count_private=true)](https://github.com/pbl0)
 
 <figure markdown>
-  ![Edit app launcher](/assets/blog/me/amora720.jpg){ .image loading=lazy }
+  ![Dog](/assets/blog/me/amora720.jpg){ .image loading=lazy }
   <figcaption>My best friend Amora</figcaption>
 </figure>
 
