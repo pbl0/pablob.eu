@@ -55,8 +55,8 @@ def create_index_file(sorted_files, output_file):
         md_file.write("## Other stuff\n\n")
         md_file.write("- [My programming projects](code/)\n")
         md_file.write("- [About me](me/)\n")
-        md_file.write("- [My Github profile](https://github.com/pbl0)\n")
-        md_file.write("- [My youtube channel](https://www.youtube.com/@pbl0_o?sub_confirmation=1)\n")
+        md_file.write("- [Github profile](https://github.com/pbl0)\n")
+        md_file.write("- [Youtube channel](https://www.youtube.com/@pbl0_o?sub_confirmation=1)\n")
         md_file.write("- [Contact me on Telegram](https://t.me/pablobls)\n")
 
 if __name__ == "__main__":
