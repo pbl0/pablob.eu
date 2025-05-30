@@ -13,12 +13,10 @@ if (window.location.pathname.includes("minecraft")) {
         const start = new Date(startDate);
         const currentDate = new Date();
 
-        // Calculate the difference in years, months, and days
         let years = currentDate.getFullYear() - start.getFullYear();
         let months = currentDate.getMonth() - start.getMonth();
         let days = currentDate.getDate() - start.getDate();
 
-        // Adjust if the days are negative
         if (days < 0) {
             months--;
             const previousMonth = new Date(
@@ -29,36 +27,37 @@ if (window.location.pathname.includes("minecraft")) {
             days += previousMonth.getDate();
         }
 
-        // Adjust if the months are negative
         if (months < 0) {
             years--;
             months += 12;
         }
 
-        let result = "Running for ";
+        const parts = [];
 
         if (years > 0) {
-            result += years + " year" + (years > 1 ? "s" : "");
+            parts.push(years + " year" + (years > 1 ? "s" : ""));
         }
 
         if (months > 0) {
-            if (years > 0) {
-                result += " and ";
-            }
-            result += months + " month" + (months > 1 ? "s" : "");
+            parts.push(months + " month" + (months > 1 ? "s" : ""));
         }
 
         if (days > 0) {
-            if (years > 0 || months > 0) {
-                result += " and ";
-            }
-            result += days + " day" + (days > 1 ? "s" : "");
+            parts.push(days + " day" + (days > 1 ? "s" : ""));
         }
 
-        if (years === 0 && months === 0 && days === 0) {
+        let result = "Running for ";
+
+        if (parts.length === 0) {
             result += "less than a day.";
+        } else if (parts.length === 1) {
+            result += parts[0] + ".";
+        } else if (parts.length === 2) {
+            result += parts.join(" and ") + ".";
         } else {
-            result += ".";
+            // More than two parts, use commas and "and" for the last part
+            const lastPart = parts.pop();
+            result += parts.join(", ") + " and " + lastPart + ".";
         }
 
         return result;
