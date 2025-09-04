@@ -13,7 +13,7 @@ _<span id="minecraft-time-passed"></span>_
 | **Version**        | <div id="minecraft-version"></div>                                              |
 | **Bedrock**        | <pre><code>mine.pablob.eu</code></pre>                                          |
 | **Bedrock port**   | <pre><code>33218</code></pre>                                                   |
-| **World size**     | <div id="minecraft-world-size">29.06 GiB</div>                                  |
+| **World size**     | <div id="minecraft-world-size">30.79 GiB</div>                                  |
 | **Rules/Info**     | [Server rules](https://telegra.ph/Servidor-de-minecraft-01-30) (Spanish)        |
 | **Group chat**     | [https://t.me/+kSekwGtYOakwOGZk](https://t.me/+kSekwGtYOakwOGZk)                |
 

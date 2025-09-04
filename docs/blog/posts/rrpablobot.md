@@ -18,6 +18,10 @@ In this post I'll showcase a bit my brand new telegram bot. In the recent years 
 
 <!-- more -->
 
+!!! warning "Archived"
+
+    This bot not longer works.
+
 <figure markdown>
   ![Post cover](/assets/blog/rrpablobot/cover.jpg){ .cover .image loading=lazy }
 </figure>
