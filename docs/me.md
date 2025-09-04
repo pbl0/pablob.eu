@@ -2,17 +2,18 @@ Hi, I'm Pablo and welcome to my website. I've built this space as my personal di
 
 ## [My projects](/code)
 
-## Some fancy github stats
+## My Github stats
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs?username=pbl0&hide=hack,tsql,php,swift,ruby&layout=compact&langs_count=8&theme=github_dark)](https://github.com/pbl0)
 [![Top Langs](https://github-readme-stats.vercel.app/api?username=pbl0&theme=github_dark&show_icons=true&count_private=true)](https://github.com/pbl0)
 
+## My best friend
+
 <figure markdown>
   ![Dog](/assets/blog/me/amora720.jpg){ .image loading=lazy }
-  <figcaption>My best friend Amora</figcaption>
 </figure>
 
-## Where the source?
+## Source?
 
 [github.com/pbl0/pablob.eu](https://github.com/pbl0/pablob.eu) under [GPL-2](https://github.com/pbl0/pablob.eu/blob/main/LICENSE).
 
