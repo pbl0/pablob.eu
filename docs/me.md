@@ -1,6 +1,6 @@
-I'm Pablo and this is my website. I like doing all sort of stuff, mostly tech related stuff. Besides tinkering with computers, I also love [listening](/music) (and sometimes pretending to play) music, playing video-games and reading books. I also have some fun with gardening and taking random pictures of the night sky and nature from time to time. Oh, I also like dogs, of course.
+Hi, I'm Pablo and welcome to my website. I've built this space as my personal digital notepad. Here you'll find articles related to many of my different interests which are mostly tinkering with computers, code, linux. Outside the tech rabbit hole I listen to plenty of [music](/music) (and occasionally try to play it), read some [books](https://es.annas-archive.org/list/XjPLuna), play games, grow a few plants, and point a camera at the night sky. Oh, I also like dogs, of course.
 
-## [Some coding projects I've made](/code)
+## [My projects](/code)
 
 ## Some fancy github stats
 
@@ -14,7 +14,7 @@ I'm Pablo and this is my website. I like doing all sort of stuff, mostly tech re
 
 ## Where the source?
 
-[github.com/pbl0/pablob.eu](https://github.com/pbl0/pablob.eu)
+[github.com/pbl0/pablob.eu](https://github.com/pbl0/pablob.eu) under [GPL-2](https://github.com/pbl0/pablob.eu/blob/main/LICENSE).
 
 ## Donate
 

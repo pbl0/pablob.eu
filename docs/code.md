@@ -8,7 +8,7 @@ author:
     picture: ""
 ---
 
--   [RR Tools](https://rr-tools.eu) (Angular & [Android app](https://play.google.com/store/apps/details?id=eu.rrtools.app) with i18n support)
+-   [RR Tools](https://rr-tools.eu) (Angular & [Android app](https://t.me/rr_tools/1514) with i18n support)
 -   [geoguessr random bot](/blog/2022/09/05/geoguessr-random-bot/) (Python telegram bot & Firestore)
 -   [This website](https://github.com/pbl0/pablob.eu) (mkdocs)
 -   [Launchpad2KB](https://github.com/pbl0/Launchdpad2KB) (Python)
