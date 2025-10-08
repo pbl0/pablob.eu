@@ -28,6 +28,14 @@ body[data-md-color-scheme="default"] article a:not(.md-meta__link) {
     animation-fill-mode: both;
 }
 
+/* Disable animation in browsers that don't support -webkit-appearance */
+/* TODO: remove this when animation-range works properly in Firefox. */
+@-moz-document url-prefix() {
+    .screenshot {
+        animation-name: none; /* Remove the animation in Firefox */
+    }
+}
+
 @keyframes show {
     from {
         opacity: 0;
