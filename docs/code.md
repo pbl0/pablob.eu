@@ -12,5 +12,5 @@ author:
 -   [geoguessr random bot](/blog/2022/09/05/geoguessr-random-bot/) (Python telegram bot & Firestore)
 -   [This website](https://github.com/pbl0/pablob.eu) (mkdocs)
 -   [Launchpad2KB](https://github.com/pbl0/Launchdpad2KB) (Python)
--   [Banana Spleet](/posts/banana-spleet) (Python)
+-   [Banana Spleet](/projects/banana-spleet) (Python)
 -   [Lambda-rr](https://lambda.pablob.eu/) (Mkdocs)

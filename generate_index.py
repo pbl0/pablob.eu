@@ -46,7 +46,7 @@ def create_index_file(sorted_files, output_file):
         md_file.write("# pablo's docs\n\n")
         md_file.write("## Latest posts\n\n")
         # Add a list of the 5 most recent files with their titles
-        for file, _, title in sorted_files[:5]:
+        for file, _, title in sorted_files[:7]:
             blog_path = file.replace('docs/', '')
             md_file.write(f"- {datetime.fromisoformat(_).strftime('%B %d, %Y')} - [{title}]({blog_path})\n")
 
