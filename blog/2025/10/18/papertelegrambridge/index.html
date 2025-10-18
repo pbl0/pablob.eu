@@ -6,18 +6,16 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="This game is incredible. Here is yet another space engine zoom out video. Enjoy the ride!
+        <meta name="description" content="Almost a year ago, I forked a Minecraft plugin that connects the chat between my Minecraft server and my Telegram group...
 ">
       
       
       
-        <link rel="canonical" href="https://pablob.eu/blog/2022/04/11/space-engine-zoom-out-time-lapse/">
+        <link rel="canonical" href="https://pablob.eu/blog/2025/10/18/papertelegrambridge/">
       
       
-        <link rel="prev" href="../../10/rrpablotbot/">
+        <link rel="prev" href="../../13/como-no-ver-partidos-de-laliga/">
       
-      
-        <link rel="next" href="../../12/raspberrypi-home-server-tour/">
       
       
       <link rel="icon" href="../../../../../assets/favicon/favicon.ico">
@@ -25,7 +23,7 @@
     
     
       
-        <title>Space engine zoom-out time lapse - pablo's docs</title>
+        <title>PaperTelegramBridge - pablo's docs</title>
       
     
     
@@ -99,7 +97,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#space-engine-zoom-out-time-lapse" class="md-skip">
+        <a href="#papertelegrambridge" class="md-skip">
           Skip to content
         </a>
       
@@ -132,7 +130,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Space engine zoom-out time lapse
+              PaperTelegramBridge
             
           </span>
         </div>
@@ -1307,6 +1305,21 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    Features
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1355,7 +1368,7 @@
               <li class="md-nav__item">
                 <div class="md-nav__link">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 19H5V8h14m-3-7v2H8V1H6v2H5c-1.11 0-2 .89-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2h-1V1m-1 11h-5v5h5v-5Z"/></svg>
-                  <time datetime="2022-04-11 00:00:00" class="md-ellipsis">April 11, 2022</time>
+                  <time datetime="2025-10-18 00:00:00" class="md-ellipsis">October 18, 2025</time>
                 </div>
               </li>
               
@@ -1366,7 +1379,7 @@
                     <span class="md-ellipsis">
                       in
                       
-                        <a href="../../../../category/games/">Games</a></span>
+                        <a href="../../../../category/minecraft/">Minecraft</a></span>
                   </div>
                 </li>
               
@@ -1377,7 +1390,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5Z"/></svg>
                     <span class="md-ellipsis">
                       
-                        1 min read
+                        2 min read
                       
                     </span>
                   </div>
@@ -1394,18 +1407,37 @@
         
 
 
-<h1 id="space-engine-zoom-out-time-lapse">Space engine zoom-out time lapse</h1>
-<p>This game is incredible. Here is yet another space engine zoom-out video. Enjoy the ride!</p>
+<h1 id="papertelegrambridge">PaperTelegramBridge</h1>
+<p>Almost a year ago, I forked a Minecraft plugin that connects the chat between my Minecraft server and my Telegram group (because I'm a Discord hater).</p>
+<p>The plugin in question is <a href="https://github.com/kraftwerk28/spigot-tg-bridge">spigot-tg-bridge</a> and, despite not being updated for a couple of years, it still works perfectly. Nevertheless, my goal was to add more functionalities to give my server a bit of personality.</p>
 <!-- more -->
-
 <figure>
-<p><a class="glightbox" href="/assets/blog/space-engine/post.jpg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Post cover" class="cover image" loading="lazy" src="/assets/blog/space-engine/post.jpg" /></a></p>
+<p><a class="glightbox" href="/assets/blog/paper-telegram-bridge/usage.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Usage" class="cover image" loading="lazy" src="/assets/blog/paper-telegram-bridge/usage.png" /></a>
+  </p>
+<figcaption>Usage example</figcaption>
 </figure>
-<div class="iframe-container">
-<iframe class="responsive-iframe" src="https://www.youtube.com/embed/Bma7UH6sZts"></iframe>
-</div>
-
-<p>Bye 👋</p>
+<p>The original plugin was in Kotlin, which I like, and distributed under <strong>GPL-3.0</strong>, which I of course maintain.</p>
+<p>The plugin has reached a phase where I'm quite satisfied with it and find it very useful for my Minecraft server, so I finally decided to share it here.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Sends messages from Minecraft chat to your Telegram group and vice versa.</li>
+<li>Announces joins, leaves, deaths, advancements, etc.</li>
+<li>Share a screenshot of your inventory from the game by sending <code>[inv]</code>. You can also share information about the <code>[item]</code> you're holding and even share books and your <code>[ender]</code> chest.</li>
+</ul>
+<figure>
+<p><a class="glightbox" href="/assets/blog/paper-telegram-bridge/book.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Share books" class="cover image" loading="lazy" src="/assets/blog/paper-telegram-bridge/book.png" /></a></p>
+</figure>
+<ul>
+<li><code>silentjoinleave</code> permission to disable tracking for certain players, useful if you use any vanish plugin.</li>
+<li>Whitelist management from Telegram with <code>/whitelist</code>. (Admin only).</li>
+</ul>
+<figure>
+<p><a class="glightbox" href="/assets/blog/paper-telegram-bridge/whitelist.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Whitelist example" class="cover image" loading="lazy" src="/assets/blog/paper-telegram-bridge/whitelist.png" /></a></p>
+</figure>
+<ul>
+<li>Configurable commands: <code>/online</code>, <code>/time</code>.</li>
+</ul>
+<p>If you're interested in using it for your server, you can download it from <a href="http://modrinth.com/plugin/paper-telegram-bridge">Modrinth</a>. I encourage you to read the complete <a href="https://github.com/pbl0/paper-telegram-bridge#readme">Readme</a> and open an issue if you find any bugs. Keep in mind that this is my first Minecraft plugin and I'm still learning.</p>
 
 
 
