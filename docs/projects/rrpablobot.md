@@ -1,1 +1,0 @@
-/media/datos/Dev/pablob.eu/docs/blog/posts/rrpablobot.md

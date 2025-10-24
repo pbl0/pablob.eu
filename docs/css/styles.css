@@ -47,3 +47,11 @@ body[data-md-color-scheme="default"] article a:not(.md-meta__link) {
         scale: 100%;
     }
 }
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5 {
+    font-family: "Bitter medium";
+}
