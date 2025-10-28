@@ -20,7 +20,7 @@ Instructions to set up a media server running [Manjaro ARM Minimal](https://manj
 > Last edit: 23/07/2023
 
 <figure markdown>
-  ![Post cover](pi-manjaro-server/pi.jpg){ .cover .image loading=lazy }
+  ![Post cover](pi-manjaro-server/pi.webp){  .image loading=lazy }
 </figure>
 
 ## Why Manjaro?

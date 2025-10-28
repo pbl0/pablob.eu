@@ -21,7 +21,7 @@ Recently I got myself a refurbished Lenovo Thinkcentre M900 Tiny which will be r
 <!-- more -->
 
 <figure markdown>
-  ![Post cover](/assets/blog/tc-m900/tiny.jpg){ .cover .image loading=lazy }
+  ![Post cover](/assets/blog/tc-m900/tiny.webp){  .image loading=lazy }
   <figcaption>Very tiny</figcaption>
 </figure>
 

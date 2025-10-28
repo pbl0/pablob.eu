@@ -23,7 +23,7 @@ In this post I'll showcase a bit my brand new telegram bot. In the recent years 
     This bot not longer works.
 
 <figure markdown>
-  ![Post cover](/assets/blog/rrpablobot/cover.jpg){ .cover .image loading=lazy }
+  ![Post cover](/assets/blog/rrpablobot/cover.webp){  .image loading=lazy }
 </figure>
 
 This time I bring a telegram bot which will scrape the web version of the game and retrieve useful data. It's been running for more than a month on my raspberry pi, and besides some issues with the game cookies expiring, it works great.

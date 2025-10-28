@@ -6,9 +6,7 @@ theme:
     name: material
     language: en
     custom_dir: overrides
-    font:
-        text: Ubuntu
-        code: Ubuntu mono
+    font: false
     palette:
         - scheme: slate
           primary: amber
@@ -85,7 +83,6 @@ nav:
     - About me:
           - Me: me.md
           - My favorite books ↪: https://es.annas-archive.org/list/XjPLuna
-          - My favorite music: music.md
           - Socials:
                 - Github ↪: https://github.com/pbl0
                 - Telegram ↪: https://t.me/pablobls
@@ -98,4 +95,4 @@ nav:
           - projects/launchpad2kb.md
           - projects/banana-spleet.md
     - Minecraft: minecraft.md
-    - Pablo's pictures: https://pics.pablob.eu/
+    - Pictures: https://pics.pablob.eu/

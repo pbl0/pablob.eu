@@ -18,7 +18,7 @@ How to remove DRM of books purchased on Kobo store using **[kobo-book-downloader
 <!-- more -->
 
 <figure markdown>
-  ![Post cover](/assets/blog/remove-kobo-drm/cover.png){ .cover .image loading=lazy }
+  ![Post cover](/assets/blog/remove-kobo-drm/cover.webp){  .image loading=lazy }
 </figure>
 
 1. Clone kobo-book-downloader repo:
@@ -50,7 +50,7 @@ python kobo-book-downloader list --all
 6. After following the initial setup instructions, a list will be shown with the books you've bought.
 
 <figure markdown>
-  ![List command](/assets/blog/remove-kobo-drm/list.png){ .image loading=lazy }
+  ![List command](/assets/blog/remove-kobo-drm/list.webp){ .image loading=lazy }
   <figcaption>List command</figcaption>
 </figure>
 
@@ -61,7 +61,7 @@ python kobo-book-downloader pick destination_dir/
 ```
 
 <figure markdown>
-  ![Download command](/assets/blog/remove-kobo-drm/download.png){ .image loading=lazy }
+  ![Download command](/assets/blog/remove-kobo-drm/download.webp){ .image loading=lazy }
   <figcaption>Download command</figcaption>
 </figure>
 

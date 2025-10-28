@@ -19,21 +19,21 @@ Muy buenas, esta es una guía técnica de cómo NO ver partidos de LaLiga estand
 <!-- more -->
 
 <figure markdown>
-  ![Post cover](/assets/blog/como-no-ver-partidos-de-laliga/cita-tebas.jpg){ .cover .image loading=lazy }
+  ![Post cover](/assets/blog/como-no-ver-partidos-de-laliga/cita-tebas.webp){  .image loading=lazy }
   <figcaption>Claro que sí.</figcaption>
 </figure>
 
 Movistar está muy caro y no te apetece ir al bar, así que vamos a ver qué nos recomienda el señor Tebas en la página web oficial de LaLiga:
 
 <figure markdown>
-  ![LaLiga bloquea las emisiones de las plataformas ilegales](/assets/blog/como-no-ver-partidos-de-laliga/titular-laliga.png){ .image loading=lazy }
+  ![LaLiga bloquea las emisiones de las plataformas ilegales](/assets/blog/como-no-ver-partidos-de-laliga/titular-laliga.webp){ .image loading=lazy }
   <figcaption>👀</figcaption>
 </figure>
 
 Ahora buscamos en Google el servicio **RBTV77** y es probable que no salga nada. Así que probamos en el buscador Yandex o Bing:
 
 <figure markdown>
-  ![Búsqueda en Yandex](/assets/blog/como-no-ver-partidos-de-laliga/busqueda.png){ .image loading=lazy }
+  ![Búsqueda en Yandex](/assets/blog/como-no-ver-partidos-de-laliga/busqueda.webp){ .image loading=lazy }
   <figcaption></figcaption>
 </figure>
 
@@ -42,12 +42,12 @@ Encontramos lo que buscábamos, ahora entramos y buscamos un partido de LaLiga e
 Pero hay una solución: nos conectamos a una VPN. En mi caso utilizo Mullvad VPN, pero te servirá cualquier otra:
 
 <figure markdown>
-  ![Un partido de la liga](/assets/blog/como-no-ver-partidos-de-laliga/partido-futbol.png){ .image loading=lazy }
+  ![Un partido de la liga](/assets/blog/como-no-ver-partidos-de-laliga/partido-futbol.webp){ .image loading=lazy }
   <figcaption></figcaption>
 </figure>
 
 <figure markdown>
-  ![Tebas enfadado](/assets/blog/como-no-ver-partidos-de-laliga/tebas-enfadado.png){ .image loading=lazy }
+  ![Tebas enfadado](/assets/blog/como-no-ver-partidos-de-laliga/tebas-enfadado.webp){ .image loading=lazy }
   <figcaption></figcaption>
 </figure>
 

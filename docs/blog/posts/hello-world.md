@@ -16,7 +16,7 @@ This the first entry on my personal blog. I've thinking for a long time on creat
 <!-- more -->
 
 <figure markdown>
-  ![Post cover](/assets/blog/hello-world/cover.jpg){ .cover .image loading=lazy }
+  ![Post cover](/assets/blog/hello-world/cover.webp){  .image loading=lazy }
 </figure>
 
 My blog won't be centered to any specific topic: I like music, games, gardening, reading books, astronomy, linux, open source and a long list of ways of messing around with computers and alikes. And also dogs of course.

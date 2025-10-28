@@ -10,7 +10,7 @@ Hi, I'm Pablo and welcome to my website. I've built this space as my personal di
 ## My best friend
 
 <figure markdown>
-  ![Dog](/assets/blog/me/amora720.jpg){ .image loading=lazy }
+  ![Dog](/assets/blog/me/amora720.webp){ .image loading=lazy }
 </figure>
 
 ## Source?

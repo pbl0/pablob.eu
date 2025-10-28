@@ -13,6 +13,10 @@ comments: true
 
 # My Kobo eReader
 
+???+ info "Update 18/01/2024"
+
+    I have since switched to a Clara 2E which is pretty much the same device with the only changes being the addition of water resistance and the replacement of the previous Micro USB charging port by a much sexier USB-C port.
+
 For some time I've been trying to recover the habit of reading and for some reason I thought that the best way to accomplish that was to buy an eReader device.
 
 So, last year I've got myself a fairly cheap refurbished [Kobo Clara HD](https://gl.kobobooks.com/products/kobo-clara-hd) from Ali Express. The experience has been very pleasant overall and I definitely read more now.
@@ -20,19 +24,23 @@ So, last year I've got myself a fairly cheap refurbished [Kobo Clara HD](https:/
 <!-- more -->
 
 <figure markdown>
-  ![Post cover](/assets/blog/kobo-clara/reader.jpg){ .cover .image loading=lazy }
+  ![Post cover](/assets/blog/kobo-clara/reader.webp){  .image loading=lazy }
 </figure>
 
 ## Why not Kindle?
 
 Because Kobo devices are capable to read `.epub` files, while kindle are limited to their **proprietary** format.
 
+???+ info "Update 22/12/2023"
+
+    I have recently learned that Kindle now supports EPUB files (kinda).
+
 ## Mods and Apps
 
 When it arrived I didn't know it had such a great modding community and funnily enough my device already came with **koreader** and **nickelmenu** pre-installed. I will now explain what these tools are and list all the hacks/modifications I've tried for this device.
 
 <figure markdown>
-  ![Kobo main menu](/assets/blog/kobo-clara/menu.jpg){ .image loading=lazy }
+  ![Kobo main menu](/assets/blog/kobo-clara/menu.webp){ .image loading=lazy }
   <figcaption>Kobo main menu</figcaption>
 </figure>
 
@@ -43,7 +51,7 @@ These two are alternative reader apps. [Koreader](https://koreader.rocks/) has a
 ### Nickelmenu
 
 <figure markdown>
-  ![Nickelmenu](/assets/blog/kobo-clara/nickelmenu.jpg){ .image loading=lazy }
+  ![Nickelmenu](/assets/blog/kobo-clara/nickelmenu.webp){ .image loading=lazy }
   <figcaption>Nickelmenu</figcaption>
 </figure>
 
@@ -56,13 +64,17 @@ Soon I've realized that the books downloaded from the Kobo store worked better o
 ### Calibre-Web
 
 <figure markdown>
-  ![Calibre web screenshot](/assets/blog/kobo-clara/calibre-web.png){ .image loading=lazy }
+  ![Calibre web screenshot](/assets/blog/kobo-clara/calibre-web.webp){ .image loading=lazy }
   <figcaption>Calibre web</figcaption>
 </figure>
 
-This one really surprised me. [Calibre-Web](https://github.com/janeczku/calibre-web) it's a selfhosted web app that I run on my [Raspberry Pi server](/posts/home-server-tour). My original idea was accesing it through the built-in browser but that didn't work at all for me. By reading on their github wiki I've found out that Calibre-Web has an amazing [Kobo sync integration](https://github.com/janeczku/calibre-web/wiki/Kobo-Integration).
+This one really surprised me. [Calibre-Web](https://github.com/janeczku/calibre-web) it's a self-hosted web app that I run on my [Raspberry Pi server](/posts/home-server-tour). My original idea was accessing it through the built-in browser but that didn't work at all for me. By reading on their github wiki I've found out that Calibre-Web has an amazing [Kobo sync integration](https://github.com/janeczku/calibre-web/wiki/Kobo-Integration).
 
-It manages to connect the device to calibre web tricking it to believe that it's querying the official Kobo servers. It syncs all my books and auto-converts them with kepubify.
+It manages to connect the device to calibre web tricking it to believe that it's querying the official Kobo servers. It syncs all my books and auto-converts them with Kepubify.
+
+???+ info "Update 28/10/2025"
+
+    I now use [Calibre-web-automated](https://github.com/crocodilestick/Calibre-Web-Automated) fork of Calibre-web. It comes with some added features such as importing files automatically when placed in a given directory and a improved UI for metadata fetching.
 
 ### Books
 

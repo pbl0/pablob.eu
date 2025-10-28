@@ -18,7 +18,7 @@ How to install Davinci Resolve in any linux distro with distrobox. For this case
 <!-- more -->
 
 <figure markdown>
-  ![Post cover](/assets/blog/davinci/install/cover.png){ .cover .image loading=lazy }
+  ![Post cover](/assets/blog/davinci/install/cover.webp){  .image loading=lazy }
 </figure>
 
 ## Installation
@@ -89,7 +89,7 @@ distrobox-export --app /opt/resolve/bin/resolve
 For some reason the default launcher created with the previous command will fail to launch. If this happens right click on Davinci Resolve icon > Edit Application > Application and leave the `Work Path` field empty.
 
 <figure markdown>
-  ![Edit app launcher](/assets/blog/davinci/install/davinci-edit-launcher.png){ .image loading=lazy }
+  ![Edit app launcher](/assets/blog/davinci/install/davinci-edit-launcher.webp){ .image loading=lazy }
   <figcaption>Edit app launcher</figcaption>
 </figure>
 
@@ -98,7 +98,7 @@ For some reason the default launcher created with the previous command will fail
 -   Be careful when cleaning podman containers by executing `podman system prune` as it may delete the distrobox container.
 
 <figure markdown>
-  ![Davinci Resolve opened](/assets/blog/davinci/install/davinci-app.png){ .image loading=lazy }
+  ![Davinci Resolve opened](/assets/blog/davinci/install/davinci-app.webp){ .image loading=lazy }
   <figcaption>Davinci Resolve</figcaption>
 </figure>
 

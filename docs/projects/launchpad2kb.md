@@ -19,7 +19,7 @@ Read on [Github](https://github.com/pbl0/Launchdpad2KB#readme)
 <!-- more -->
 
 <figure markdown>
-  ![Post cover](/assets/blog/launchpad2kb/launchpad2kb.jpg){ .cover .image loading=lazy }
+  ![Post cover](/assets/blog/launchpad2kb/launchpad2kb.webp){  .image loading=lazy }
 </figure>
 
 > **Important:** I have only tested this implementation with the first Novation Launchpad, model `NOVLPD01`.
@@ -129,5 +129,5 @@ Haven't tested it on Windows/MacOS.
 ### Cells
 
 <figure markdown>
-  ![cells image](/assets/blog/launchpad2kb/cells.png){ .image loading=lazy }
+  ![cells image](/assets/blog/launchpad2kb/cells.webp){ .image loading=lazy }
 </figure>

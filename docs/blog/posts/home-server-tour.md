@@ -17,7 +17,7 @@ Just a little video showcasing the services I'm running on my little home server
 <!-- more -->
 
 <figure markdown>
-  ![Post cover](/assets/blog/home-server-tour/cover.png){ .cover .image loading=lazy }
+  ![Post cover](/assets/blog/home-server-tour/cover.webp){  .image loading=lazy }
 </figure>
 
 <div class="iframe-container">

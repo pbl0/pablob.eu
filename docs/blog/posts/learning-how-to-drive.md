@@ -20,7 +20,7 @@ Just showing off some visual mods, dynamic weather and my bad driving. My comput
 <!-- more -->
 
 <figure markdown>
-  ![Post cover](/assets/blog/ac/lhtd1.png){ .cover .image loading=lazy }
+  ![Post cover](/assets/blog/ac/lhtd1.webp){  .image loading=lazy }
 </figure>
 
 <div class="iframe-container">

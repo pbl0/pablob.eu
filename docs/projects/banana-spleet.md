@@ -16,7 +16,7 @@ Recently I've been working on my spare time on a simple GUI app for the interest
 
 <!-- more -->
 
-![Banana Spleet's Screenshot](/assets/blog/banana-spleet/Screenshot.png)
+![Banana Spleet's Screenshot](/assets/blog/banana-spleet/Screenshot.webp)
 
 As Spleeter is originally just a CLI app, what I did was basically a GUI to use it. I've found a few similar projects on github but the ones that stood out to me sadly only worked on Windows (I use linux btw). **It was also a great opportunity to use this silly name.**
 

@@ -17,7 +17,7 @@ Elite Dangerous used to be playable out the box using Steam Proton but for some 
 <!-- more -->
 
 <figure markdown>
-  ![Post cover](/assets/blog/minedlauncher/cover.png){ .cover .image loading=lazy }
+  ![Post cover](/assets/blog/minedlauncher/cover.webp){  .image loading=lazy }
 </figure>
 
 Sadly, Frontier Developments doesn't seem to care enough about Linux users, so we might need to try many of the solutions that users have suggested at [protondb](https://www.protondb.com/app/359320) and see if anything works, which in my case they never did, except one.
@@ -43,7 +43,7 @@ You will probably better off following MinEdLauncher [documentation](https://git
 Then launch the game and enjoy.
 
 <figure markdown>
-  ![minedlauncher](/assets/blog/minedlauncher/minedlauncher.jpg){ .image loading=lazy }
+  ![minedlauncher](/assets/blog/minedlauncher/minedlauncher.webp){ .image loading=lazy }
   <figcaption>Minimal Launcher</figcaption>
 </figure>
 

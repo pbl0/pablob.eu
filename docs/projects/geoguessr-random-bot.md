@@ -20,7 +20,7 @@ I've made yet another telegram bot! Yay!
 <!-- more -->
 
 <figure markdown>
-  ![Post cover](/assets/blog/geo-random/bot.jpg){ .cover .image loading=lazy }
+  ![Post cover](/assets/blog/geo-random/bot.webp){  .image loading=lazy }
 </figure>
 
 > "GeoGuessr is a geography game which takes you on a journey around the world and challenges your ability to recognize your surroundings."
@@ -28,7 +28,7 @@ I've made yet another telegram bot! Yay!
 Geoguessr challenges are a great way to start playing this game as they are completely free to play. This bot receives the challenge and stores them in a database, then it will answer whenever it receives the `/random` command with a previously stored random link. Should work in groups too.
 
 <figure markdown>
-  ![minedlauncher](/assets/blog/geo-random/geo-random.png){ .image loading=lazy }
+  ![minedlauncher](/assets/blog/geo-random/geo-random.webp){ .image loading=lazy }
   <figcaption>A random challenge</figcaption>
 </figure>
 

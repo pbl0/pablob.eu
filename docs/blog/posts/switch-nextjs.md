@@ -20,7 +20,7 @@ As you may have read on my first post this blog started as a little GatsbyJS web
     I no longer use NextJS for this website. I've switched to mkdocs material.
 
 <figure markdown>
-  ![Post cover](/assets/blog/switch/cover.png){ .cover .image loading=lazy }
+  ![Post cover](/assets/blog/switch/cover.webp){  .image loading=lazy }
 </figure>
 
 I migrated this blog mostly because of my lack of good ideas to start with this framework. So, I initiated the project with the [blog-starter-typescript](https://github.com/vercel/next.js/tree/canary/examples/blog-starter-typescript) and after cleaning up some of the components I won't be using and changing a bit of CSS I call it done. Apparently this example comes with Tailwind css configured, but I feel more conformable with Bulma, so I've switched to that.

@@ -16,7 +16,7 @@ This game is incredible. Here is yet another space engine zoom-out video. Enjoy 
 <!-- more -->
 
 <figure markdown>
-  ![Post cover](/assets/blog/space-engine/post.jpg){ .cover .image loading=lazy }
+  ![Post cover](/assets/blog/space-engine/post.webp){  .image loading=lazy }
 </figure>
 
 <div class="iframe-container">
