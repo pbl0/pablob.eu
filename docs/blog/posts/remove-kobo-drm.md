@@ -4,7 +4,7 @@ description: >
 
 date: 2023-01-14T20:05:00.000Z
 categories:
-    - Piracy
+    - Sharing
     - Reading
 authors:
     - pablo
