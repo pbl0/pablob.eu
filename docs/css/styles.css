@@ -8,7 +8,7 @@
 @font-face {
     font-family: "Ubuntu Sans";
     font-style: italic;
-    font-weight: 100 800;
+    font-weight: 400;
     font-display: swap;
     src: url(/assets/fonts/UbuntuSans-Italic.ttf) format("truetype");
 }
@@ -21,26 +21,19 @@
     src: url(/assets/fonts/Bitter.ttf) format("truetype");
 }
 @font-face {
-    font-family: "Bitter";
-    font-style: italic;
-    font-weight: 100 900;
-    font-display: swap;
-    src: url(/assets/fonts/Bitter-Italic.ttf) format("truetype");
-}
-@font-face {
-    font-family: "Cascadia Code";
+    font-family: "Cascadia Mono";
     font-style: normal;
-    font-weight: 200 700;
+    font-weight: 400;
     font-display: swap;
-    src: url(/assets/fonts/CascadiaCode.ttf) format("truetype");
+    src: url(/assets/fonts/CascadiaMono-Regular.ttf) format("truetype");
 }
 
 :root {
     --md-text-font: Ubuntu Sans, Ubuntu, -apple-system, BlinkMacSystemFont,
         avenir next, avenir, segoe ui, helvetica neue, Cantarell, roboto, noto,
         helvetica, arial, Adwaita Sans, sans-serif;
-    --md-code-font: Cascadia Code, "Ubuntu Mono", Menlo, Consolas, Monaco,
-        Adwaita Mono, Liberation Mono, Lucida Console, monospace;
+    --md-code-font: Cascadia Mono, Cascadia Code, "Ubuntu Mono", Menlo, Consolas,
+        Monaco, Adwaita Mono, Liberation Mono, Lucida Console, monospace;
 }
 
 .md-typeset img,
@@ -66,11 +59,6 @@
 }
 .md-typeset .w800 {
     max-width: 800px;
-}
-
-.md-typeset h1,
-.md-typeset h2 {
-    font-weight: 400;
 }
 
 .md-tabs__link {
