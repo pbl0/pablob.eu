@@ -43,6 +43,27 @@
         Adwaita Mono, Liberation Mono, Lucida Console, monospace;
 }
 
+.md-typeset img,
+.md-typeset svg,
+.md-typeset video {
+    max-width: 600px;
+}
+
+/** Width utility classes for images */
+/** Default max-width is 600px */
+.md-typeset .w400 {
+    max-width: 400px;
+}
+.md-typeset .w500 {
+    max-width: 500px;
+}
+.md-typeset .w700 {
+    max-width: 700px;
+}
+.md-typeset .w800 {
+    max-width: 800px;
+}
+
 .md-typeset h1,
 .md-typeset h2 {
     font-weight: 400;
@@ -86,7 +107,6 @@ iframe {
 }
 
 .image {
-    max-height: 720px;
     view-timeline-name: --image;
     view-timeline-axis: block;
 
