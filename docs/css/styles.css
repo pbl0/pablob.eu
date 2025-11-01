@@ -1,12 +1,70 @@
-body {
-    font-family: Ubuntu, -apple-system, BlinkMacSystemFont, avenir next, avenir,
-        segoe ui, helvetica neue, Adwaita Sans, Cantarell, roboto, noto,
-        helvetica, arial, sans-serif;
+@font-face {
+    font-family: "Ubuntu Sans";
+    font-style: normal;
+    font-weight: 100 800;
+    font-display: swap;
+    src: url(/assets/fonts/UbuntuSans.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Ubuntu Sans";
+    font-style: italic;
+    font-weight: 100 800;
+    font-display: swap;
+    src: url(/assets/fonts/UbuntuSans-Italic.ttf) format("truetype");
 }
 
-code {
-    font-family: "Ubuntu Mono", Menlo, Consolas, Monaco, Adwaita Mono,
-        Liberation Mono, Lucida Console, monospace;
+@font-face {
+    font-family: "Bitter";
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(/assets/fonts/Bitter.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Bitter";
+    font-style: italic;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url(/assets/fonts/Bitter-Italic.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Cascadia Code";
+    font-style: normal;
+    font-weight: 200 700;
+    font-display: swap;
+    src: url(/assets/fonts/CascadiaCode.ttf) format("truetype");
+}
+
+:root {
+    --md-text-font: Ubuntu Sans, Ubuntu, -apple-system, BlinkMacSystemFont,
+        avenir next, avenir, segoe ui, helvetica neue, Cantarell, roboto, noto,
+        helvetica, arial, Adwaita Sans, sans-serif;
+    --md-code-font: Cascadia Code, "Ubuntu Mono", Menlo, Consolas, Monaco,
+        Adwaita Mono, Liberation Mono, Lucida Console, monospace;
+}
+
+.md-typeset h1,
+.md-typeset h2 {
+    font-weight: 400;
+}
+
+.md-tabs__link {
+    font-weight: 500;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5 {
+    font-family: Bitter, Iowan Old Style, Apple Garamond, Baskerville,
+        Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
+        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+}
+
+.page-title {
+    font-family: var(--md-text-font-family) !important;
+    font-weight: 500 !important;
 }
 
 body[data-md-color-scheme="slate"] {
@@ -57,14 +115,4 @@ iframe {
         opacity: 1;
         scale: 100%;
     }
-}
-
-.md-typeset h1,
-.md-typeset h2,
-.md-typeset h3,
-.md-typeset h4,
-.md-typeset h5 {
-    font-family: Bitter, Iowan Old Style, Apple Garamond, Baskerville,
-        Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
-        Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
 }

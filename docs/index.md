@@ -1,4 +1,4 @@
-# pablo's docs
+# pablo's docs {  .page-title } 
 
 ## Latest posts
 
