@@ -49,6 +49,10 @@
     max-width: 600px;
 }
 
+.md-author img {
+    max-width: 100%;
+}
+
 /** Width utility classes for images */
 /** Default max-width is 600px */
 .md-typeset .w400 {
