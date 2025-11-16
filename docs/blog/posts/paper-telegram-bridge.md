@@ -46,4 +46,6 @@ The plugin has now reached a phase where I'm quite satisfied with it and has bee
 
 -   Configurable commands: `/online`, `/time`.
 
-If you're interested in using it for your server, you can download it from [Modrinth](http://modrinth.com/plugin/paper-telegram-bridge). I encourage you to read the complete [Readme](https://github.com/pbl0/paper-telegram-bridge#readme) and open an issue if you find any bugs. Keep in mind that this is my first Minecraft plugin and I'm still learning.
+If you're interested in using it for your server, you can download it from [Modrinth](https://modrinth.com/plugin/paper-telegram-bridge#download). I encourage you to read the complete [Readme](https://github.com/pbl0/paper-telegram-bridge#readme) and open an issue if you find any bugs. Keep in mind that this is my first Minecraft plugin and I'm still learning.
+
+[Download plugin](https://modrinth.com/plugin/paper-telegram-bridge#download){ .md-button }

@@ -1,4 +1,4 @@
-Hi, I'm Pablo and welcome to my website. I've built this space as my personal digital notepad. Here you'll find articles related to many of my different interests which are mostly tinkering with computers, code, linux. Outside the tech rabbit hole I listen to plenty of [music](/music) (and occasionally try to play it), read some [books](https://es.annas-archive.org/list/XjPLuna), play games, grow a few plants, and point a camera at the night sky. Oh, I also like dogs, of course.
+Hi, I'm Pablo and welcome to my website. I've built this space as my personal digital notepad. Here you'll find articles related to many of my different interests which are mostly tinkering with computers, code, linux. Outside the tech rabbit hole I listen to plenty of music (and occasionally try to play it), read some [books](https://es.annas-archive.li/list/XjPLuna?r=5vvf29t), play games, grow a few plants, and point a camera at the night sky. Oh, I also like dogs, of course.
 
 ## [My projects](/code)
 

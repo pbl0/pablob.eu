@@ -78,4 +78,4 @@ It manages to connect the device to calibre web tricking it to believe that it's
 
 ### Books
 
-Either buy books from Kobo store directly o buy books without DRM. You can also [learn how to remove DRM from kobo's books](/posts/remove-kobo-drm). A great source for **free books** is [Anna's Archive](https://annas-archive.org/).
+Either buy books from Kobo store directly o buy books without DRM. You can also [learn how to remove DRM from kobo's books](/posts/remove-kobo-drm). A great source for **free books** is [Anna's Archive](https://annas-archive.li?r=5vvf29t).
