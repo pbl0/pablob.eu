@@ -22,7 +22,7 @@ if (window.location.pathname.includes("minecraft")) {
             const previousMonth = new Date(
                 currentDate.getFullYear(),
                 currentDate.getMonth(),
-                0
+                0,
             );
             days += previousMonth.getDate();
         }
@@ -80,17 +80,6 @@ if (window.location.pathname.includes("minecraft")) {
             document.getElementById("minecraft-icon").src = data.icon;
             setServerAddress(data.host);
             setServerOnline(data.online);
-            if (data.players.online < data.players.list.length) {
-                // for vanish
-                data.players.list = data.players.list.filter(
-                    (item) => item.name_clean !== "pbl0"
-                );
-            }
-            let playerList = data.players.list
-                .map((item) => item.name_clean)
-                .join(", ");
-            document.getElementById("minecraft-player-list").textContent =
-                playerList;
         } catch (error) {
             console.error("Error fetching server status:", error);
             setServerOnline(false);
