@@ -50,6 +50,12 @@
     max-width: 100%;
 }
 
+#minecraft-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: -0.25em;
+}
+
 .md-tabs__link {
     font-weight: 500;
 }

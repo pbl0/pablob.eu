@@ -9,7 +9,6 @@ _<span id="minecraft-time-passed"></span>_
 | **Address**        | <pre><code id="minecraft-address">pablob.eu</code></pre>                 |
 | **Status**         | <div id="minecraft-status"></div>                                        |
 | **Players online** | <span id="minecraft-players">0</span>                                    |
-| **Player list**    | <div id="minecraft-player-list"></div>                                   |
 | **Version**        | <div id="minecraft-version"></div>                                       |
 | **Bedrock**        | <pre><code>mine.pablob.eu</code></pre>                                   |
 | **Bedrock port**   | <pre><code>33218</code></pre>                                            |
@@ -17,4 +16,4 @@ _<span id="minecraft-time-passed"></span>_
 | **Rules/Info**     | [Server rules](https://telegra.ph/Servidor-de-minecraft-01-30) (Spanish) |
 | **Group chat**     | [https://t.me/+kSekwGtYOakwOGZk](https://t.me/+kSekwGtYOakwOGZk)         |
 
-*[Bedrock]: Cross-play between Java and Bedrock thanks to Geyser plugin.
+\*[Bedrock]: Cross-play between Java and Bedrock thanks to Geyser plugin.
